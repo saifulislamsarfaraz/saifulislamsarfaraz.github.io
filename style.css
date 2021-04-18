@@ -198,7 +198,7 @@ button:focus {
   top: 0;
   right: 0;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 70em) {
   header .header_logo img{
     visibility: hidden;
     transition: 0.1s;
