@@ -4,8 +4,7 @@ const open = document.getElementById('open');
 const modal = document.getElementById('modal');
 
 // Toggle nav
-toggle.addEventListener('click', () =>
-  document.body.classList.toggle('show-nav')
+toggle.addEventListener('click', () =>document.body.classList.toggle('show-nav')
 );
 
 // Show modal
