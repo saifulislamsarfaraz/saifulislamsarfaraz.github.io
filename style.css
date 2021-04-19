@@ -196,10 +196,11 @@ button:focus {
 
 .close-btn {
   background: transparent;
-  font-size: 25px;
+  font-size: 19px;
   position: absolute;
   top: 0;
   right: 0;
+  background-color: black;
 }
 
 @media only screen and (max-width: 75em) {
