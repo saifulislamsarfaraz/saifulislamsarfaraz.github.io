@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+  <title>CSE325 - Assignment2</title>
+  <!-- Stolen from: https://jonbarron.info/ -->
+  
+  <meta name="author" content="Jon Barron">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <!--<link rel="icon" type="image/png" href="images/seal_icon.png">-->
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+		  <!-- Introductory Section starts-->
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <p style="text-align:left">
+                <name>Assignment 2</name>
+            </td>
+          </tr>
+        </tbody></table>
+		
+		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+				<heading>Problem 1: Starvation [27 pts]</heading>
+				<p>Are the following scheduling algorithms prone to starvation? <br><br>
+				
+				For each scheduling algorithm, explain a scenario with a number of processes, their burst length along with their arrival time, which may or may not lead to starvation based on your answer.  <br><br>
+				
+				Make sure to draw a Gantt chart and specify the processes that will starve where applicable. <br>
+							
+				</p>
+				
+				<ol>
+				<ul>
+					<li>FCFS</li>
+					<li>SJF</li>
+					<li>SRTF</li>
+					<li>RR</li>
+					<li>Priority</li>
+					<li>Multi-level Queue</li>
+					<li>Multi-level Feedback Queue</li>
+					<li>O(n) Linux</li>
+					<li>O(1) Linux</li>
+				</ul>
+			</td>
+			</tr>
+			
+			<tr>
+            <td style="padding:20px;width:100%;vertical-align:left">
+				<heading>Problem 2 </heading>
+				<p>Consider the following single-threaded processes, their arrival times, and CPU bursts.
+				</p>
+				
+				
+				<table style="width:60%;border:1px solid black;border-spacing:1px;border-collapse:collapse;margin-right:auto;margin-left:auto;vertical-align:left">
+				
+				<thead>
+					<tr>
+					<th style="width:25%;border: 1px solid black"> Process </th>
+					<th style="width:25%;border: 1px solid black"> CPU Burst</th>
+					<th style="width:25%;border: 1px solid black"> Arrival Time </th>
+					<th style="width:25%;border: 1px solid black"> Priority </th>
+					</tr>
+				</thead>
+			
+				<tbody>
+				<tr>
+					<td class="td-num"> A </td>
+					<td class="td-num"> 3 </td>
+					<td class="td-num"> 1 </td>
+					<td class="td-num"> 1 </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> B </td>
+					<td class="td-num"> 3 </td>
+					<td class="td-num"> 2 </td>
+					<td class="td-num"> 3 </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> C </td>
+					<td class="td-num"> 4 </td>
+					<td class="td-num"> 2 </td>
+					<td class="td-num"> 2 </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> D </td>
+					<td class="td-num"> 1 </td>
+					<td class="td-num"> 4 </td>
+					<td class="td-num"> 4 </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> E </td>
+					<td class="td-num"> 2 </td>
+					<td class="td-num"> 6 </td>
+					<td class="td-num"> 3 </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> F </td>
+					<td class="td-num"> 3 </td>
+					<td class="td-num"> 6 </td>
+					<td class="td-num"> 2 </td>
+				</tr>
+			
+				</tbody>
+				</table>
+				
+				<p>
+				You will consider the following scheduling algorithms: 
+				(1) FCFS, 
+				(2) SJF, 
+				(3) SRTF, 
+				(4) RR, 
+				(5) Priority, 
+				(6) Multi-level Queue, 
+				(7) Multi-level Feedback Queue. <br><br>
+				
+				The followings apply:
+				<ul>
+				
+				<li>The time quanta of the RR scheduler is 1.</li>
+				
+				<li>If two processes arrive at the same time, they are inserted in the ready queue in
+					the lexicographical order. For example, if B and C arrive at the same time, B is
+					inserted first, and C second in the ready queue.</li>
+				
+				<li>In the case of the RR scheduler, a new arriving process is inserted at the end of
+					the ready queue. When the RR quantum expires, the currently running thread is
+					added at the end of the ready list before any newly arriving threads. </li>
+				
+				<li>The RR scheduler ignores the process priorities. </li>
+				
+				<li>The FCFS/SJF scheduler uses priorities to break ties, i.e., if two processes arrive at the same time, we schedule the one with the highest priority.</li>
+				
+				<li>The SRTF scheduler uses priorities to break ties, i.e., if two processes have the
+				same remaining time we schedule the one with the highest priority.</li>
+				
+				<li>The Priority scheduler uses remaining time to break ties, i.e., if two processes have the same priority, we schedule the shortest remaining time.</li>
+				
+				<li>
+				For Multi-level Queue scheduler, within each priority level threads are scheduled in a round-robin manner with 
+				a 1 timeslice 
+				</li>
+				
+				<li>
+				Consider the following priority levels for multi-level feedback queue scheduler :
+				<ul>
+					<li>priority 2 (lowest), which runs threads with a 1 timeslice </li>
+					<li>priority 1, which runs threads with a 0.2 timeslice; and </li>
+					<li>priority 0 (highest), which runs threads with a 0.1 timeslice</li>
+				</ul>
+				When a thread uses its entire timeslice and remains runnable, it is moved to a lower priority level (if
+				possible). When a thread does not use entire timeslice (and was not preempted), it is moved to a
+				higher priority level (if possible). Initially threads start out at the highest priority level. Within each
+				priority level, threads are scheduled in a round-robin manner.
+				</li>
+				</ul>
+				
+				Given the above information, fill in the following table. Make sure to show the associated Gantt Chart and calculate the average wait and completion time for each scheduling algorithm.
+				</p>
+				
+				<table style="width:60%;border:1px solid black;border-spacing:1px;border-collapse:collapse;margin-right:auto;margin-left:auto;vertical-align:left">
+				
+				<thead>
+					<tr>
+					<th style="width:50%;border: 1px solid black"> Time </th>
+					<th style="width:12.5%;border: 1px solid black"> FCFS</th>
+					<th style="width:12.5%;border: 1px solid black"> SJF </th>
+					<th style="width:12.5%;border: 1px solid black"> SRTF </th>
+					<th style="width:12.5%;border: 1px solid black"> RR </th>
+					<th style="width:12.5%;border: 1px solid black"> Priority </th>
+					<th style="width:12.5%;border: 1px solid black"> Multi-level Queue </th>
+					<th style="width:12.5%;border: 1px solid black"> Multi-level Feedback Queue </th>
+					</tr>
+				</thead>
+			
+				<tbody>
+				<tr>
+					<td class="td-num"> 0 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 1 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> 2 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 3 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 4 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 5 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 6 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 7 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 8 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 9 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 10 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 11 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 12 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 13 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 14 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 15 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> 16 </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				
+				<tr>
+					<td class="td-num"> Avg Wait Time </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+				<tr>
+					<td class="td-num"> Avg Completion Time </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+					<td class="td-gen">  </td>
+				</tr>
+			
+				</tbody>
+				</table>
+			</td>
+			</tr>
+		  
+			<tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+				<heading>Instructions</heading>
+				</p>
+				
+				<ul>
+				
+					<li>You have to submit a soft copy of your assignment in pdf format and name it as your 10 digit student ID, i.e., if your student ID is 2020-3-60-000 your pdf name should be 2020-3-60-000.pdf. 
+					</li>
+					
+					<li>
+					You may use Microsoft Word / LaTeX as your editor. However, 20% marks will be deducted for hand-written assignments (Special cases may be allowed: contact via email).<br>
+					</li>
+					
+					<li>
+					You may draw the Gantt Chart by hand / use available softwares online and insert them as images in your document 
+					</li>
+					
+					<li>
+					Any sort of plagiarism will be dealt very strictly. In case of such violation both parties will be penalized heavily.
+					</li>
+				</ul>
+			</td>
+			</tr>
+		  
+		  
+        </tbody></table>
+		
+		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              
+            </td>
+          </tr>
+        </tbody></table>
+        
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
