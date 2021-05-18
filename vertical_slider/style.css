@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 *{
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 body{
-    font-family: 'Open Sans' sans-serif;
+    font-family: 'Open Sans' ,sans-serif;
     height: 100vh;
 }
 
 .slider-container{
     position: relative;
     overflow: hidden;
-    height: 100vw;
-    width: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
 .left-slide{
@@ -22,6 +24,7 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
+    transition: transform .5s ease-in-out;
 }
 
 .left-slide > div{
@@ -46,7 +49,7 @@ body{
     position: absolute;
     top: 0;
     left: 35%;
-  
+    transition: transform .5s ease-in-out;
 }
 
 .right-slide > div{
@@ -57,7 +60,22 @@ body{
     width: 100%;
 }
 
-.button{
+button{
+    background-color: #FFF;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+
+}
+
+button:hover{
+    color: #222;
+}
+
+button :focus{
+    outline: none;
 
 }
 
@@ -70,8 +88,16 @@ body{
 }
 .slider-container .action-buttons .down-button{
     transform: translateX(-100%);
-
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+
+.slider-container .action-buttons .up-button{
+    transform: translateY(-100%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 
 
 
