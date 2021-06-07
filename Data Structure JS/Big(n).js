@@ -4,4 +4,11 @@ function logItems(n){
     }
 }
 
+function logitems1(n){
+    while(!n){
+        console.log(n)
+        n--;
+    }
+}
+logitems1(15)
 logItems(15)
