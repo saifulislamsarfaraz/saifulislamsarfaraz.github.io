@@ -61,4 +61,12 @@ function logItems(a, b){
 //Time complexity O(n * n + n) 
 // we drop non dominants tarm O(n * n)
 
+
+//time complexity O(1)
+/* function addOperation(n){
+    return n + n + n 
+}
+
+addOperation (10) */
+
 logItems(10)
