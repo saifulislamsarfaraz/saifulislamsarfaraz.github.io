@@ -47,4 +47,18 @@ function logItems(a, b){
 // the time complexity should be O(a + b) dont be botherd about it becouse here passing variable a, b and we don't say that a equal to b 
 // logItems(a , b)
 
+//drop non dominants tarm
+function logItems(a, b){
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < n; j++){
+            console.log(i, j)
+        }
+    }
+    for(let k = 0; j < n; k++){
+        console.log(k)
+    }
+}
+//Time complexity O(n * n + n) 
+// we drop non dominants tarm O(n * n)
+
 logItems(10)
