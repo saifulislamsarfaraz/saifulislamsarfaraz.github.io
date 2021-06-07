@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Newsreader',sans-serif;
+  overflow-x: hidden;
+  background-color: #333;
+  color: #222;
+  margin:0;
+}
+
+.search{
+  position: relative;
+  height: 50px;
+  top: 10px;
+  left:60px;
+  
+}
+
+.search .input_search{
+  background-color: #fff;
+  border:0;
+  font-size: 18px;
+  padding: 15px;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn_search{
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn_search:focus,
+.input_search:focus{
+  outline:none;
+}
+
+.search.active .input_search{
+  width: 200px;
+}
+
+.search.active .btn_search{
+  transform: translateX(198px);
+}
+
+.container{
+  background-color: #fafafa;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  margin: 0;
+}
+.container.show-nav{
+  transform-origin: top right;
+  transition: transform .5s linear;
+  transform: rotate(20deg);
+}
+.container.show-nav1{
+  transform-origin: top left;
+  transition: transform .5s linear;
+  transform: rotate(-20deg);
+}
+.container.show-nav +  nav li{
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.container.show-nav + nav li{
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.circle-container{
+  position: fixed;
+  top:-100px;
+  right: -100px;
+}
+.circle1-container{
+  position :fixed;
+  top: -100px;
+  left: -100px;
+}
+.loading-text{
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+.circle{
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+.circle button{
+  cursor: pointer;
+  position: absolute;
+  top:50%;
+  right: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  
+}
+.circle1 button{
+  cursor: pointer;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+.container.show-nav .circle{
+  transform: rotate(-70deg);
+}
+.container.show-nav1 .circle1{
+  transform: rotate(-70deg);
+}
+.circle button:focus{
+  outline: none;
+}
+
+.circle button#open{
+  right: 60%;
+}
+
+.circle button#close{
+  right:60%;
+  transform: rotate(90deg);
+  transform-origin: top right;
+}
+.circle1 button:focus{
+  outline: none;
+}
+.circle1 button#openLeft{
+  left: 60%;
+}
+.circle1 button#closeLeft{
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.circle1{
+  background-color: tomato;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+.circle1 button{
+  cursor:pointer;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fafafa;
+}
+nav ul{
+  list-style-type: none;
+  padding-right: 40px;
+
+}
+ nav ul li{
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(100%);
+  transition: tramsform 0.5s ease-in;
+}
+ nav ul li i{
+  font-size: 20px;
+  margin-right: 10px;
+}
+ nav ul li + li{
+  margin-right: 15px;
+  transform: translateX(150%);
+}
+nav ul li + li + li{
+  margin-right: 30px;
+  transform: translateX(200%);
+}
+nav{
+  position:fixed;
+  bottom: 40px;
+  right:  0;
+  z-index: 100;
+}
+/* .nav1 nav ul{
+  list-style-type: none;
+  padding-right: 40px;
+
+}
+.nav1 nav ul li{
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: tramsform 0.5s ease-in;
+}
+.nav1 nav ul li i{
+  font-size: 20px;
+  margin-right: 10px;
+}
+.nav1 nav ul li + li{
+  margin-right: 15px;
+  transform: translateX(-150%);
+}
+.nav1 nav ul li + li + li{
+  margin-right: 30px;
+  transform: translateX(-200%);
+}
+.nav1 nav{
+  position:fixed;
+  bottom: 40px;
+  right:  0;
+  z-index: 100;
+
+} */
+.content img{
+  max-width: 100%;
+  top: -30;
+  left: -30;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  filter: blur(0px);
+}
+.content{
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1{
+  margin: 0;
+}
+
+.content small{
+   color: #555;
+   font-size: italic;
+}
+
+.content p{
+  color: #333;
+  line-height: 1.5;
+}
+
+
+
