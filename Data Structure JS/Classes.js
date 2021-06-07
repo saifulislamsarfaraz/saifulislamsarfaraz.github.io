@@ -12,3 +12,12 @@ class Cookie{
 
 let cookieOne = new Cookie ("Green")
 let cookieTwo = new Cookie("blue")
+
+/* output
+cookieOne.getColor()
+Green
+cookieTwo.getColor()
+blue 
+cookieOne.setColor("Red")
+cookieOne.getColor()
+Red */
