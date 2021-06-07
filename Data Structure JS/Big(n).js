@@ -1,19 +1,50 @@
-function logItems(n){
+/* function logItems(n){
     for(let i = 0; i < n; i++){
         console.log(i)
     }
     for(let j = 0; j < n; j++){
         console.log(j)
     }
-}
+} */
 
 // n + n = 2n time comlexity 
 // drop constant so big o notation basically O(n)
-function logitems1(n){
-    while(!n){
-        console.log(n)
-        n--;
+
+
+
+//nasted for loop add time complexity O(n^2)
+/* function logItems(n){
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < n; j++){
+            console.log(i, j)
+        }
+    }
+} */
+// basically here the number of output n * n = n^2 
+
+// if we add another for loop 
+/* function logItems(n){
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < n; j++){
+            for(let k = 0; k < n; k++){
+                console.log(i, j, k)
+            }
+           
+        }
+    }
+} */
+
+// So here the output is n * n * n = n^3 
+// time comlexity n^3
+function logItems(a, b){
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < n; j++){
+            console.log(i, j)
+        }
     }
 }
-logitems1(15)
-logItems(15)
+
+// the time complexity should be O(a + b) dont be botherd about it becouse here passing variable a, b and we don't say that a equal to b 
+// logItems(a , b)
+
+logItems(10)
