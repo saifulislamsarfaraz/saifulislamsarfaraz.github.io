@@ -123,8 +123,12 @@ class LinkedList{
             return this.push()
         }
         if(index < 0 || index >= this.length) return undefined
-        
-
+        const before = this.get (index - 1)
+        const temp  = before.next 
+        before.next = temp.next
+        temp.next = null
+        length--
+        return temp
         
     }
 
