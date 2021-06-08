@@ -115,7 +115,13 @@ class LinkedList{
         return true
     }
 
-    
+    remove (index){
+        if(index === 0){
+            return this.shift()
+        }
+
+        
+    }
 
 }
 
