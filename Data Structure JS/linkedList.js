@@ -32,6 +32,12 @@ class LinkedList{
         this.tail = pre
         this.tail.next = null
         length--
+
+        if(length===0){
+            this.head = null
+            this.tail = null
+        }
+        return temp
     }
 }
 
