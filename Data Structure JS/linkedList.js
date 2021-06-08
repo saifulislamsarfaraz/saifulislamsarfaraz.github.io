@@ -54,6 +54,20 @@ class LinkedList{
         length++
         return this
     }
+
+    shift(){
+        if(!this.head){
+            return undefined
+        }
+        let temp = this.head
+        this.head = this.head.next
+        temp.next = null 
+        length--
+        if(length === 0){
+            this.head = null
+            this.tail = null
+        }
+    }
 }
 
 let myLinkedList = new LinkedList(18)
@@ -61,3 +75,4 @@ myLinkedList.push(12)
 myLinkedList.push(13)
 myLinkedList.push(42)
 myLinkedList.pop()
+myLinkedList.unshift(20)
