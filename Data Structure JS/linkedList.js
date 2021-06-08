@@ -67,7 +67,20 @@ class LinkedList{
             this.head = null
             this.tail = null
         }
+        return temp
     }
+
+    get(index){
+        if(index < 0 || index >= this.length){
+            return undefined
+        }
+        let temp = this.head 
+        for(let i = 0; i < index; i++){
+            temp = temp.next
+        }
+        return temp
+    }
+
 }
 
 let myLinkedList = new LinkedList(18)
@@ -76,3 +89,4 @@ myLinkedList.push(13)
 myLinkedList.push(42)
 myLinkedList.pop()
 myLinkedList.unshift(20)
+myLinkedList.get(3)//index value passing 
