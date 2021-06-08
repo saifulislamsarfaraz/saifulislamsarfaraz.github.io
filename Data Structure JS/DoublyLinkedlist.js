@@ -6,9 +6,14 @@ class Node {
     }
 }
 
-class LinkedList{
+class DoublyLinkedList{
     constructor (value){
         const newNode = new Node(value)
-        
+        this.head = newNode
+        this.tail = this.head
+        this.length = 1
     }
 }
+
+let myDoublyLinkedList = new DoublyLinkedList(10)
+myDoublyLinkedList
