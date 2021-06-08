@@ -120,6 +120,9 @@ class LinkedList{
             return this.shift()
         }
 
+        if(index === this.length - 1){
+            return this.push()
+        }
         
     }
 
