@@ -145,6 +145,7 @@ class LinkedList{
             prev = temp 
             temp = next
         }
+        return this
     }
 }
 
