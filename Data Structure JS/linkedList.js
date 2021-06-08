@@ -18,9 +18,25 @@ class LinkedList{
         this.length++
         return this
     }
+
+    pop(){
+        if(!this.head){
+            return undefined
+        }
+        let temp = this.head
+        let pre = this.head
+        while(this.head){
+            pre = temp 
+            temp.next = temp
+        }
+        this.tail = pre
+        this.tail.next = null
+        length--
+    }
 }
 
 let myLinkedList = new LinkedList(18)
 myLinkedList.push(12)
 myLinkedList.push(13)
 myLinkedList.push(42)
+myLinkedList.pop()
