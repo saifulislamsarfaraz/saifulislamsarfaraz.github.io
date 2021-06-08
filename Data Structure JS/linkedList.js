@@ -1,3 +1,10 @@
+class Node {
+    constructor(value){
+        this.value = value
+        this.next = null
+    }
+}
+
 class LinkedList{
     constructor(value){
         const newNode = new Node(value)
@@ -81,6 +88,15 @@ class LinkedList{
         return temp
     }
 
+    set(index, value){
+        let temp = this.get(index)
+        if(temp){
+            temp.value = value
+            return true
+        }
+        return false
+    }
+
 }
 
 let myLinkedList = new LinkedList(18)
@@ -90,3 +106,7 @@ myLinkedList.push(42)
 myLinkedList.pop()
 myLinkedList.unshift(20)
 myLinkedList.get(3)//index value passing 
+myLinkedList.set(3,20)
+
+
+
