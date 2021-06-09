@@ -23,7 +23,55 @@ body{
   width: 100%;
   display: block;
   background-color:cornsilk;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-family: inherit;
 }
+
+.user-form input:focus{
+  outline: none;
+}
+
+.card{
+  max-width: 800px;
+  background-color: beige;
+  border-radius: 20px;
+  display: flex;
+  padding: 3rem;
+  margin: 0 2rem;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
