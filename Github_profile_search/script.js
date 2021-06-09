@@ -6,42 +6,41 @@ const APIURL = 'https://api.github.com/users/'
     .catch(err => console.log(err))
 } */
 
-const form = document.getElementById('form')
 const main = document.getElementById('main')
+const form = document.getElementById('form')
 const search = document.getElementById('search')
 
-async function getUser( username){
+async function getUser(username){
     try{
-        const {data} = await axios(APIURL + username)
-
+        const { data } = await axios(APIURL + username)
 
         createUserCard(data)
     
     }catch(error){
-        console.log(error)
+        if(error.response.status == 404){
+            createErrorCard()\
+        }
+        
     }
 }
 
-function createUserCard(card){
+function createUserCard(user){
         const cardHTML = ` 
-        <div class="card">
+    <div class="card">
         <div>
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="avater">
+            <img src=" ${user.avatar_url} " alt=" ${user.name} " class="avater">
         </div>
     
         <div class="user-info">
-             <h2>jhondoe</h2>
+             <h2>${user.name}</h2>
+             <p>${user.bio}</p>
             <ul>
-                <li>300 <strong>Followers</strong></li>
-                <li>100 <strong>Following</strong></li>
-                <li>50 <strong>Repos</strong></li>
+                <li> ${user.followers} <strong>Followers</strong></li>
+                <li> ${user.following} <strong>Following</strong></li>
+                <li> ${user.public_repos} <strong>Repos</strong></li>
             </ul>
 
-              <div id="repo">
-                <a href="#" class="repo">Repo 1</a>
-                <a href="#" class="repo">Repo 2</a>
-                <a href="#" class="repo">Repo 3</a>
-              </div>
+              <div id="repo"></div>
         </div>
     </div>
     `
