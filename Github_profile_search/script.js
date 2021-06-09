@@ -25,7 +25,7 @@ async function getUser(username){
 }
 
 function createErrorCard(msg){
-    const cardHTML = `
+    const cardHTML   = `
     <div class="card">
         <h1>${msg}</h1>
     </div>
