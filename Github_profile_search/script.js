@@ -18,10 +18,21 @@ async function getUser(username){
     
     }catch(error){
         if(error.response.status == 404){
-            createErrorCard()\
+            createErrorCard('No profile with this User Name')
         }
         
     }
+}
+
+function createErrorCard(msg){
+    const cardHTML = `
+    <div class="card">
+        <h1>${msg}</h1>
+    </div>
+    `
+    main.innerHTML = cardHTML
+
+
 }
 
 function createUserCard(user){
