@@ -7,8 +7,17 @@ getUser('saifulislamsarfaraz')
     .catch(err => console.log(err))
 } */
 
-async function getUser( username){
-    const res = await axios(APIURL + username)
-    console.log(res.data)
+const form = document.getElementById('form')
 
+async function getUser( username){
+    try{
+        const {data} = await axios(APIURL + username)
+
+        console.log(data)
+    
+    }catch(error){
+        console.log(error)
+    }
 }
+
+form.addEventListener('submit')
