@@ -15,6 +15,7 @@ async function getUser(username){
         const { data } = await axios(APIURL + username)
 
         createUserCard(data)
+        getRepos(username)
     
     }catch(error){
         if(error.response.status == 404){
@@ -24,6 +25,20 @@ async function getUser(username){
     }
 }
 
+async function getRepos(username){
+    try{
+        const { data } = await axios(APIURL + username +'/repos')
+
+        addReposToCard(data)
+    
+    }catch(error){
+    
+            createErrorCard('Problem fetching repos')
+        
+        
+    }
+
+}
 
 function createUserCard(user){
         const cardHTML = ` 
@@ -41,7 +56,7 @@ function createUserCard(user){
                 <li> ${user.public_repos} <strong>Repos</strong></li>
             </ul>
 
-              <div id="repo"></div>
+              <div id="repos"></div>
         </div>
     </div>
     `
@@ -59,7 +74,23 @@ function createErrorCard(msg){
     main.innerHTML = cardHTML
 }
 
+function addReposToCard(repos){
+    const reposElement = document.getElementById('repos')
 
+    repos.forEach(repo=>{
+        const repoElement = document.createElement('a')
+        repoElement.classList.add('repo')
+        repoElement.href = repo.html_url
+        repoElement.target = '_blank'
+        repoElement.innerText = repo.name
+
+        reposElement.appendChild(repoElement)
+
+
+
+    })
+
+}
 
 form.addEventListener('submit',(e) => {
     e.preventDefault()
