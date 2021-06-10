@@ -27,7 +27,7 @@ async function getUser(username){
 
 async function getRepos(username){
     try{
-        const { data } = await axios(APIURL + username +'/repos')
+        const { data } = await axios(APIURL + username +'/repos?sort=created')
 
         addReposToCard(data)
     
@@ -77,7 +77,9 @@ function createErrorCard(msg){
 function addReposToCard(repos){
     const reposElement = document.getElementById('repos')
 
-    repos.forEach(repo=>{
+    repos
+    .slice(0, 5)
+    .forEach(repo=>{
         const repoElement = document.createElement('a')
         repoElement.classList.add('repo')
         repoElement.href = repo.html_url
