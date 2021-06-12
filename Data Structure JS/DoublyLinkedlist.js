@@ -15,8 +15,7 @@ class DoublyLinkedList{
     }
 
 
-    
-    push(value){
+        push(value){
         const newNode = new Node(value)
         if(!this.head){
             this.head = newNode
@@ -29,6 +28,45 @@ class DoublyLinkedList{
         this.length++
         return this
     }
+
+    pop(){
+        if(this.length===0)
+        return undefined
+
+        let temp = this.tail
+        this.tail = this.tail.prev
+        this.tail.next = null
+        temp.prev = null
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 let myDoublyLinkedList = new DoublyLinkedList(10)
