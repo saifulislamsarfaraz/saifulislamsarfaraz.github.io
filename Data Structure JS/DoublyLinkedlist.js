@@ -37,6 +37,8 @@ class DoublyLinkedList{
         this.tail = this.tail.prev
         this.tail.next = null
         temp.prev = null
+	return this 
+
         
     }
 
