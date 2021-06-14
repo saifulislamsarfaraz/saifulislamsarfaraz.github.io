@@ -9,8 +9,7 @@ using namespace std;
 //Group ID: 8
 //Name : Md Saiful
 //Id : 2019-2-60-040
-//Name :Md Jekrul Islam
-//ID : 2019-2-60-046
+
 /* Problem
     William Stallings presents a more complicated version of the barbershop problem, which he
     attributes to Ralph Hilzer at the California State University at Chico.
@@ -181,8 +180,7 @@ int main(void)
     printf("\t\t\t\tGroup: 8\n");
 	printf("\t\t\t\tName: Md Saiful\n");
 	printf("\t\t\t\tID: 2019-2-60-040\n");
-	printf("\t\t\t\tName: Md Jekrul Islam\n");
-	printf("\t\t\t\tID: 2019-2-60-046\n");
+
 
 	pthread_t thread1[20];
 	pthread_t thread2[3];
