@@ -77,7 +77,7 @@ class DoublyLinkedList{
     }
 
     get(index){
-        if(index < 0 && index >=this.length){
+        if(index < 0 || index >=this.length){
             return undefined
         }
         let temp1 = this.head
