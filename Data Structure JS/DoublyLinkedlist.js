@@ -37,7 +37,6 @@ class DoublyLinkedList{
         this.tail = this.tail.prev
         this.tail.next = null
         temp.prev = null
-<<<<<<< HEAD
         this.length--
         if(this.length===0){
             this.head = null
@@ -57,11 +56,6 @@ class DoublyLinkedList{
         this.head.prev = newNode
      }       
      
-=======
-	return this 
-
-        
->>>>>>> d54e627f6d7de1ad88aac12e6b37f733fe5ff984
     }
 
 
