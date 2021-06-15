@@ -120,7 +120,7 @@ class LinkedList{
             return this.shift()
         }
         if(index === this.length - 1){
-            return this.push()
+            return this.pop()
         }
         if(index < 0 || index >= this.length) return undefined
         const before = this.get (index - 1)
