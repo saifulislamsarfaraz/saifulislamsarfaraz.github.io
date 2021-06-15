@@ -98,7 +98,7 @@ class LinkedList{
     }
 
     insert(index, value){
-        if(index < 0 || index >= length){
+        if(index < 0 || index >= this.length){
             return false
         }
         if(index === 0){
