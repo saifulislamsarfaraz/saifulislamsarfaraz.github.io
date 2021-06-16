@@ -7,8 +7,10 @@ class Node{
 }
 
 class BST{
-    constructor(value){
-        const newNode = new Node(value)
-        
+    constructor(){
+        this.root = null
     }
 }
+
+let tree = new BST()
+tree
