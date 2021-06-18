@@ -38,7 +38,7 @@ class BST{
         }
     }
 
-    search(value){
+    contains(value){
         if(root === null){
             return undefined
         }
@@ -56,36 +56,7 @@ class BST{
         return false
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 }
 
 let tree = new BST()
@@ -94,3 +65,4 @@ tree.insert(12)
 tree.insert(13)
 tree.insert(14)
 tree.insert(15)
+true.contains(30)
