@@ -21,3 +21,6 @@ class HashTable{
         return this
     }
 }
+
+let myHashTable = new HashTable()
+myHashTable
