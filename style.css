@@ -14,7 +14,6 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   transition: transform 0.3s ease;
-
 }
 
 body.show-nav {
