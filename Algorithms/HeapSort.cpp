@@ -19,6 +19,11 @@ int HeapSort(int ara[],int n){
         ara[1] = ara[n];
         ara[n] = val;
         i = 1; j = i*2;
+        if(j==n){
+           if(ara[i]>ara[j]){
+            swap(ara[i],ara[n]);
+         }
+        }
         while(j<n-1){
             if(ara[j+1]>ara[j]){
                 j++;

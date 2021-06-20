@@ -14,4 +14,5 @@ function selectionSort(){
         array[min] = temp
         }
     }
+    return array
 }
