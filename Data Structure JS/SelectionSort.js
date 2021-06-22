@@ -4,8 +4,7 @@ function selectionSort(){
         min  = i
         for(let j = i + 1; j < Array.length; j++){
             if(array[j] < array[min]){
-                min = j
-                
+                min = j  
             }
         }
         if(i!==min){
