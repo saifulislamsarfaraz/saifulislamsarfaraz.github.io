@@ -29,7 +29,6 @@ function margeSort (array){
     let mid = Math.floor(array.length/2)
     let left = array.slice(0, mid)
     let right = array.slice(mid)
-
     return marge(margeSort(left),margeSort(right))
 
 }
