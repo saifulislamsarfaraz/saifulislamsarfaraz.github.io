@@ -13,7 +13,8 @@ int marge(int ara[],int start,int mid,int end){
                 i++;
             }else{
                 combined[tempIndex++] = ara[j];
-                invC+=(mid-i+1);
+                 invC+=(end-mid);
+                 //invC+=(mid-i+1);
                  j++;
 
 
