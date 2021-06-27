@@ -13,8 +13,8 @@ int marge(int ara[],int start,int mid,int end){
                 i++;
             }else{
                 combined[tempIndex++] = ara[j];
-                 invC+=(end-mid);
-                 //invC+=(mid-i+1);
+                 //invC+=(end-mid);
+                 invC+=(mid-i+1);
                  j++;
 
 
@@ -46,7 +46,6 @@ int margeSort(int ara[],int start, int end){
 
         invC +=(margeSort(ara,start,mid)+margeSort(ara,mid+1,end)+marge(ara,start,mid,end));
         }
-
         return invC;
 
 }
