@@ -63,5 +63,4 @@ int main(){
     long long int cnt = countPairs(ara,n,sum);
 
     cout<<""<<cnt<<endl;
-
 }
