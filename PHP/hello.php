@@ -82,10 +82,33 @@
         echo "$numbers[$i] <br>";
     }
 
-    
-    include "Assignment.html"
+    $title = "this is your page";
+    $author = "saiful";
+    $wordCount = 400;
+    include "again.php";    
+   
+    include "useful-tool.php";
+    sayHi(" saiful you");
+
+    echo $feetInMile;
 
 
+
+    class Book{
+        var $title;
+        var $author;
+        var $pages;
+
+        function __construct($aTitle, $aAuthor,$aPages){
+            $this->title = $aTitle;
+            $this->author = $aAuthor;
+            $this->pages = $aPages;
+        }
+    }
+
+    $book = new Book("Harry Pottar<br>","JK Rowling<br>",100);
+
+    echo $book->author;
 
 
 
