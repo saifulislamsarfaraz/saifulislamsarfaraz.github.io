@@ -39,7 +39,7 @@
 
     <input type="submit">
     </form>
-    -->
+   
 
     <form action="hello.php" method="post">
         Apples: <input type="checkbox" name="fruits[]" value="apples"> <br>
@@ -51,37 +51,194 @@
 
     
     </form>
-
+   -->
     <form action="hello.php" method="post">
-    
-    <input type="text" name="student">
+    <!--<input type="text" step="0.001" name="num1"> <br>
+    <input type="text" name="op"> <br>
+    <input type="text" step="0.001" name="num2"> <br>
+    <input type="text" name="grade">
+    -->
+
 
     <input type="submit">
-    
     </form>
 
     <br><br><br>
     <?php
 
+    $index = 1;
+    while($index <= 5){
+        echo "$index <br>";
+        $index++;
+    }
+
+    for($i = 0; $i <= 5; $i++){
+        echo "$i <br>";
+    }
+
+    $numbers = array(1,2,3,4,5,6,7,8,9);
+    
+    for($i = 0; $i <= count($numbers); $i++){
+        echo "$numbers[$i] <br>";
+    }
+
+    
+    include "Assignment.html"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    $grade = $_POST["grade"];
+
+    switch($grade){
+        case "A":
+            echo "you did amazing";
+            break;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $num1 = $_POST["num1"];
+    $op = $_POST["op"];
+    $num2 = $_POST["num2"];
+
+    if($op=="+"){
+        echo $num1 + $num2;
+    }else if($op=="-"){
+        echo abs($num1 - $num2);
+    }else if($op=="*"){
+        echo $num1 * $num2;
+    }else if($op=="/"){
+        echo $num1/$num2;
+    }else{
+        echo "invalid Oparator";
+    }
+
+
+
+
+
+
+
+
+
+
+
+ 
+
     $fruits = $_POST["fruits"];
-
     echo $fruits[1];
-
     $grades = array("Alu"=>"A+","Mula"=>"A-","Dheros"=>"C+");
     echo $grades[$_POST["student"]];
-
     function sayHi($name){
         echo "hello $name";
     }
     $name = "saiful";
     sayHi($name);
-
-
     function cube($num){
         return $num * $num * $num;
     }
-
     echo $cubeResult = cube(2);
+
+    function getMax($num1, $num2, $num3){
+        if($num1>=$num2 && $num1 >= $num3){
+            return $num1;
+        }else if($num2>=$num1 && $num2 >= $num3){
+            return $num2;
+        }else{
+            return $num3;
+        }
+    }
+
+     echo getMax(12,35,5);
+    
 
 
 
@@ -158,7 +315,7 @@
 
 
 
-      /*
+     
       $color = $_POST["color"];
       $pluralNoun = $_POST["pluralNoun"];
       $celebrity = $_POST["celebrity"];
