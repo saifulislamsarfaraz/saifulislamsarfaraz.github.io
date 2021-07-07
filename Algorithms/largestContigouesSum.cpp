@@ -26,3 +26,28 @@ int main(){
 
     //maximum ending here 
 }
+
+//another way using sliding 
+/*
+int largestRange(int ara[],int target){
+  int ans = 0;
+  int i = 0;
+  int j = 0;
+  int total = 0;
+  int size = sizeof(ara);
+  while(j!=size){
+    total += ara[j];
+
+    if(total <= target){
+      ans = max(ans,j - i + 1);
+    }
+
+    while (total > target)
+    {
+      total-=ara[i++];
+    }
+    j++;
+  }
+  return ans;
+}
+*/
