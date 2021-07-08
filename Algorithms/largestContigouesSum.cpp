@@ -47,8 +47,49 @@ int largestRange(int ara[],int target){
       total-=ara[i++];
     }
     j++;
+ 
   }
+ 
   return ans;
+}
+
+
+#include<stdio.h>
+#define ll long long
+ll maxlen(ll arr[],ll n,ll lar);
+int main()
+{
+    // Write your code here
+    ll n,l;
+    scanf("%lld",&n);
+    ll arr[n+5];
+    for(int i=0;i<n;++i){
+        scanf("%lld",&arr[i]);
+    }
+    scanf("%lld",&l);
+    printf("%lld",maxlen(arr,n,l));
+}
+
+ll maxlen(ll arr[],ll n,ll lar){
+
+    ll len=1,maxl=0,strt=0,end=1;
+    ll sum=arr[strt];
+
+    while(end<n){
+        sum+=arr[end];
+        end++;
+        
+        if(sum>lar){
+            sum-=arr[strt];
+            strt++;
+            len--;
+        }
+        len++;
+        if(len>maxl) maxl=len;
+        
+    }
+    
+return maxl;
 }
 */
 
