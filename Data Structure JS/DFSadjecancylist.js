@@ -26,6 +26,22 @@ class Graph{
         }
         delete this.adjecancyList[vertex];
     }
+
+    depthFirstSearch(start){
+    const result = [];
+    const visited = {};
+        (function dfs(vertex){
+            if(!vertex) return null;
+            visited[vertex] = true;
+            result.push(vertex);
+            adjecancyList[vertex].forEach(neighbor => {
+                if(!visited[neighbor])
+                dfs(neighbor);
+            });
+        })(start);
+
+        return result; 
+    }
 }
 
 let g = new Graph();
