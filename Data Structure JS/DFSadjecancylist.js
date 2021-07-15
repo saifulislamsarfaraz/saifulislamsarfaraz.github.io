@@ -40,7 +40,7 @@ class Graph{
             });
         })(start);
 
-        return result; 
+        return result;
     }
 }
 
