@@ -48,9 +48,9 @@ int main(){
     int curr_box = 0;
     int curr_cap = total_cap;
 
-        while(curr_box<n-1){
+        while(curr_box<n){
 
-            if(best_choice[curr_box][curr_cap]==1){
+            if(best_choice[curr_box][curr_cap]==1 && b[curr_box].w<=curr_cap){
                 cout<<"Take box "<<curr_box+1<<endl;
                 curr_cap = curr_cap - b[curr_box].w;
                 curr_box++;
