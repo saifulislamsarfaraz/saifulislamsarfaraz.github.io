@@ -26,8 +26,6 @@ void dfs1(int u){
 }
 void dfs2(int u){
     col[u] = GREY;
-  //  discover[u] = timeCounter;
-  //  timeCounter++;
     int v;
     for(int i = 0; i < transpose[u].size(); i++){
         v = transpose[u][i];
@@ -36,8 +34,6 @@ void dfs2(int u){
         }
     }
     col[u] = BLACK;
-   // finising[u] = timeCounter;
-   // timeCounter++;
 }
 void dfs3(int u){
     col[u] = GREY;
@@ -56,7 +52,7 @@ void dfs3(int u){
 }
 int main(){
     int n,e;
-    int cnt = 0;
+    int cnt = 0,cnt2=0;
     cin>>n;
     cin>>e;
     int u,v;
@@ -65,52 +61,57 @@ int main(){
         adj[u].push_back(v);
         transpose[v].push_back(u);
         transpose2[v].push_back(u);
+        transpose2[u].push_back(v);
     }
     for(int i = 1; i <= n; i++){
         col[i] = WHITE;
     }
-
     for(int i = 1; i <= n; i++){
             if(col[i]==WHITE)
                 dfs1(i);
     }
+
+
     for(int i = 1; i <= n; i++){
         col[i] = WHITE;
     }
-
     for(int i = 1; i <=n; i++){
         int a = s.top();
          s.pop();
-
         if(col[a]==WHITE){
             q.push(a);
             dfs2(a);
         }
     }
-    int max = INT_MAX;
-    int b=0;
+
+
+    for(int i = 1; i <= n; i++){
+        col[i] = WHITE;
+    }
+    for(int i = 1; i<=n;i++){
+        if(col[i]==WHITE){
+            cnt2++;
+            dfs3(i);
+        }
+    }
+
     for(int i = 1; i <= n; i++){
         col[i] = WHITE;
     }
    // cout<<q.size()<<endl;
    //1 5 4 8
+   if(cnt2>1){
+    cout<<0<<endl;
+   }else{
     int a = q.front();
-    dfs3(a);
-    for(int i = 1; i <=n; i++){
+    dfs2(a);
+    for(int i = 0; i <=n; i++){
         if(col[i]==BLACK){
             cnt++;
         }
 
     }
 
-
-//    for(int i = 1; i <=n; i++){
-//             //cout<<discover[i]<<""<<finising[i]<<""<<endl;
-//        if(finising[i]==1 && discover[i]==0){
-//            cout<<i<<endl;
-//             break;
-//        }
-//
-//    }
-   cout<<cnt<<endl;
+        cout<<cnt<<endl;
+   }
 }
