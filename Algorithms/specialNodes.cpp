@@ -5,11 +5,13 @@ using namespace std;
 #define BLACK 2
 vector<int> adj[100005];
 vector<int> transpose[100005];
+vector<int> transpose2[100005];
 int col[100005];
 int discover[100005];
 int finising[100005];
 int timeCounter = 0;
 stack<int> s;
+queue<int> q;
 void dfs1(int u){
     col[u] = GREY;
     int v;
@@ -24,8 +26,8 @@ void dfs1(int u){
 }
 void dfs2(int u){
     col[u] = GREY;
-    discover[u] = timeCounter;
-    timeCounter++;
+  //  discover[u] = timeCounter;
+  //  timeCounter++;
     int v;
     for(int i = 0; i < transpose[u].size(); i++){
         v = transpose[u][i];
@@ -34,9 +36,23 @@ void dfs2(int u){
         }
     }
     col[u] = BLACK;
+   // finising[u] = timeCounter;
+   // timeCounter++;
+}
+void dfs3(int u){
+    col[u] = GREY;
+    discover[u] = timeCounter;
+    timeCounter++;
+    int v;
+    for(int i = 0; i < transpose2[u].size(); i++){
+        v = transpose2[u][i];
+        if(col[v]==WHITE){
+            dfs3(v);
+        }
+    }
+    col[u] = BLACK;
     finising[u] = timeCounter;
     timeCounter++;
-
 }
 int main(){
     int n,e;
@@ -48,6 +64,7 @@ int main(){
         scanf("%d %d",&u,&v);
         adj[u].push_back(v);
         transpose[v].push_back(u);
+        transpose2[v].push_back(u);
     }
     for(int i = 1; i <= n; i++){
         col[i] = WHITE;
@@ -64,15 +81,28 @@ int main(){
     for(int i = 1; i <=n; i++){
         int a = s.top();
          s.pop();
+
         if(col[a]==WHITE){
+            q.push(a);
+            dfs2(a);
+        }
+    }
+    int max = INT_MAX;
+    int b=0;
+    for(int i = 1; i <= n; i++){
+        col[i] = WHITE;
+    }
+   // cout<<q.size()<<endl;
+   //1 5 4 8
+    int a = q.front();
+    dfs3(a);
+    for(int i = 1; i <=n; i++){
+        if(col[i]==BLACK){
             cnt++;
-        dfs2(a);
-        if(finising[a]==1){
-            cout<<a<<endl;
-            }
         }
 
     }
+
 
 //    for(int i = 1; i <=n; i++){
 //             //cout<<discover[i]<<""<<finising[i]<<""<<endl;
@@ -82,5 +112,5 @@ int main(){
 //        }
 //
 //    }
-   // cout<<cnt<<endl;
+   cout<<cnt<<endl;
 }
