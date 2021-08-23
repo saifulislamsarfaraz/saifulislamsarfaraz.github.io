@@ -4,7 +4,7 @@
     justify-content: center;
 	position: relative;
     text-align: right;
-	top: 10%;
+	top: 20%;
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
 	   -moz-transform: translate(-50%,-50%);
@@ -26,16 +26,28 @@
 	animation: animate 10s linear infinite;
 
 }
-
+.loader h5{
+	justify-content: center;
+	background-color: white;
+}
 @keyframes animate{
 	0%{
 		background-position: left 0px top 80px;
 	}
+	10%{
+		background-position: left 1000px top -50px;
+	}
+	20%{
+		background-position: left 400px top -50px;
+	}
 	40%{
+		background-position: left 600px top -50px;
+	}
+	60%{
 		background-position: left 800px top -50px;
 	}
 	80%{
-		background-position: left 1800px top -50px;
+		background-position: left 1000px top -50px;
 	}
 	100%{
 		background-position: left 2400px top 80px;
@@ -47,9 +59,6 @@
 
 <div class="loader">
 <h1>Shortest path find</h1>
-<?php 
-    echo"developed by saifulislamsarfaraz"
-?>
 </div>
 
 

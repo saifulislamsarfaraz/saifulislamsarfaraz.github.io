@@ -2,6 +2,7 @@
  
 
 </style>
+<?php include("watertext.php");?>
 
 <div class="header">
     <?php 
