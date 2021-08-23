@@ -1,7 +1,3 @@
-<style type="text/css">
- 
-
-</style>
 <style>
 .loader{
     background: #262626;
@@ -20,7 +16,6 @@
 .loader h1{
     background-color: #fff;
     text-align: center;
-	margin-left: 100px;
 	padding: 0;
 	text-transform: uppercase;
 	font-size: 6em;
@@ -28,7 +23,7 @@
 	background-image: url(https://image.ibb.co/ciSeac/image.png);
 	background-repeat: repeat-x;
 	-webkit-background-clip: text;
-	animation: animate 15s linear infinite;
+	animation: animate 10s linear infinite;
 
 }
 
@@ -49,19 +44,12 @@
 
 </style>
 
-<div class="header">
-    <?php 
-    
-    function set_road($x,$y,$road){
-        $mark = $road;
-        $mark[$x][$y] = 1;
-        $mark[$x+1][$y] = 1;
-        $mark[$x-1][$y] = 1;
-        $mark[$x][$y+1] = 1;
-        $mark[$x][$y-1] = 1;
-        return $mark;
-    }
 
-    ?>
-
+<div class="loader">
+<h1>Shortest path find</h1>
+<?php 
+    echo"developed by saifulislamsarfaraz"
+?>
 </div>
+
+
