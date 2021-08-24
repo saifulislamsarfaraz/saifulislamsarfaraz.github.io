@@ -28,15 +28,21 @@
         background: url(File/map.png);
         background-size: 100%;
         transition: all .2s ease-in;
+        filter: contrast(200%);
     }
 
     .visit_previous{
         background: url(File/);
+        background-size: cover;
+        transition: all 0.2s ease-in;
+        filter: brightness(20%);
+        filter: invert(100%);
     }
 
     .header{
-        width: 1360px;
+        width: 1440px;
         height: 635px;
+        position: relative;
     }
 </style>
 
@@ -95,6 +101,29 @@
     $market_vertext_y = array(19,31,42,25,7,19,31,42,25,4,25);
 
     
+    for($i = 0; $i < 11; $i++){
+        $x = $market_vertext_x[$i];
+        $y = $market_vertext_y[$i];
+        $market = set_home($a,$b,$market);
+        $road = set_market_road($a,$b,$road);
+        $center[$a][$b] = 1;
+    }
+    $road = set_road(1,1,"v_l",46,$road);//horizontal
+    $road = set_road(8,1,"v_l",46,$road);
+    $road = set_road(15,1,"v_l",46,$road);
+    $road = set_road(21,1,"v_l",46,$road);
+
+    $road = set_road(1,1,"v_u",20,$road);//vertical
+    $road = set_road(1,13,"v_u",7,$road);
+    $road = set_road(1,37,"v_u",7,$road);
+    $road = set_road(1,47,"v_u",20,$road);
+
+    $road = set_road(8,34,"v_u",7,$road);
+    $road = set_road(8,16,"v_u",7,$road);
+
+
+
+
 ?>
 
 </div>
