@@ -1,11 +1,12 @@
 <style>
 .loader{
-    background: #262626;
+    background: #2C3531;
     justify-content: center;
 	position: relative;
     text-align: right;
-	top: 20%;
+	top: 7%;
 	left: 50%;
+	border-radius: 20px;
 	-webkit-transform: translate(-50%,-50%);
 	   -moz-transform: translate(-50%,-50%);
 	    -ms-transform: translate(-50%,-50%);
@@ -14,7 +15,7 @@
 }
 
 .loader h1{
-    background-color: #fff;
+    background-color: #FFFAFA;
     text-align: center;
 	padding: 0;
 	text-transform: uppercase;
@@ -35,7 +36,7 @@
 		background-position: left 0px top 80px;
 	}
 	10%{
-		background-position: left 1000px top -50px;
+		background-position: left 2400px top -50px;
 	}
 	20%{
 		background-position: left 400px top -50px;
