@@ -59,7 +59,7 @@
 
 
 <div class="loader">
-<h1>Shortest path find</h1>
+<h1>Shortest path finder</h1>
 </div>
 
 

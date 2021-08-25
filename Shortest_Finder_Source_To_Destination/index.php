@@ -2,17 +2,17 @@
     .normal,.road,.market,.home,.visit,.visit_previous{
         width: 12px; 
         height: 12px; 
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-top: 0px;
+        margin: 0px;
         float: left;
         color:#000000;
         font-size: 10px;
         text-align: center;
     }
     .home{
+       border-radius: 1px; 
        background-color:#b8baba;
     }
+    
     .market{
         background-color: red;
     }
@@ -107,11 +107,11 @@ $n = 49;
     }
     $home = set_home(5,7,$home);
 
-    $market_vertext_x = array(5,5,5,11,18,18,18,18,4,11,18,11);
-    $market_vertext_y = array(19,31,42,25,7,19,31,42,25,4,25,42);
+    $market_vertext_x = array(5,5,5,5,11,18,18,18,18,4,11,18,11);
+    $market_vertext_y = array(7,19,31,42,25,7,19,31,42,25,4,25,42);
 
     
-    for($i = 0; $i < 12; $i++){
+    for($i = 0; $i < 13; $i++){
         $x = $market_vertext_x[$i];
         $y = $market_vertext_y[$i];
         $market = set_home($x,$y,$market);
@@ -146,7 +146,7 @@ $road=set_road(16,31,'v_u',1,$road);
 $road=set_road(16,19,'v_u',1,$road);
 $road=set_road(16,7,'v_u',3,$road);
 
-$road=set_road(18,2,'v_l',3,$road);
+
 
 $road=set_road(5,2,'v_l',3,$road);
 $road=set_road(5,9,'v_l',3,$road);
