@@ -29,6 +29,11 @@
         width: 100%;
         height: 100%;
         cursor: pointer;
+        
+    }
+    .btn:hover{
+        border-radius: 0px;
+        background-color: black;
     }
     .visit{
         background: url(File/map.png);
@@ -123,11 +128,14 @@ $road=set_road(8,1,'v_l',46,$road);
 $road=set_road(15,1,'v_l',46,$road);
 $road=set_road(1,1,'v_l',46,$road);
 $road=set_road(21,1,'v_l',46,$road);
+$road=set_road(47,1,'v_l',46,$road);
 
-$road=set_road(1,1,'v_u',20,$road);
-$road=set_road(1,47,'v_u',20,$road);
+$road=set_road(1,1,'v_u',46,$road);
+$road=set_road(1,47,'v_u',46,$road);
 $road=set_road(1,37,'v_u',7,$road);
 $road=set_road(1,13,'v_u',7,$road);
+$road=set_road(22,25,'v_u',24,$road);
+
 
 $road=set_road(8,34,'v_u',7,$road);
 $road=set_road(8,16,'v_u',7,$road);

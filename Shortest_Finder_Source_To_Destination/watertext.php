@@ -19,6 +19,7 @@
     text-align: center;
 	padding: 0;
 	text-transform: uppercase;
+	margin: 15px;
 	font-size: 6em;
 	color: rgba(255,255,255,.1);
 	background-image: url(https://image.ibb.co/ciSeac/image.png);
@@ -36,7 +37,7 @@
 		background-position: left 0px top 80px;
 	}
 	10%{
-		background-position: left 2400px top -50px;
+		background-position: left 2400px top -60px;
 	}
 	20%{
 		background-position: left 400px top -50px;
@@ -51,7 +52,7 @@
 		background-position: left 1000px top -50px;
 	}
 	100%{
-		background-position: left 2400px top 80px;
+		background-position: left 2400px top -40px;
 	}
 }
 
