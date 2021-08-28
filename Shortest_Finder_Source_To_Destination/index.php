@@ -61,6 +61,7 @@
 </style>
 
 <?php include("watertext.php");?>
+<?php include("Trie.php");?>
 
 <div class="header">
     <?php 
