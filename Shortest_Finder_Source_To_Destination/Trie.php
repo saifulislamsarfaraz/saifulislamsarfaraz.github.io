@@ -28,8 +28,8 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
-    <script src="dataread.js"></script>
+    <script src="trie.js"></script>
+    <script src="app.js"></script>
 
 </body>
 

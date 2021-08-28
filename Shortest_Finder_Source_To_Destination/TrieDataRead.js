@@ -24,7 +24,7 @@ function handleTap(e) {
 
 //function for text-field
 function textFieldHandler(e) {
-  const value = e.target.value.toLowerCase()
+  const value = e.target.value.toUpperCase()
   const predictions = search(value, 0, root)
 
   list.innerHTML = ''
