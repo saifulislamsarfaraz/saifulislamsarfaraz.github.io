@@ -1,4 +1,5 @@
-const items = ["abbc","adda","ffff","gggg","hhhh","reee","sadasd"]; //array to hold all the countries
+const items = ["Mirpur","Uttara","Mohammadpur","Dhanmondi","Savar",
+"Badda","Jatrabari","Gulshan","Bashundhara","Rampura","Motijheel","Basabo","Banani"]; //array to hold all the countries
 const root = new MakeNode('\0') //making the root note
 
 
