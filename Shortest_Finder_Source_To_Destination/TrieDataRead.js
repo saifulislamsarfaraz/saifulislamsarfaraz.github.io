@@ -1,5 +1,4 @@
-const items = ["Mirpur","Uttara","Mohammadpur","Dhanmondi","Savar",
-"Badda","Jatrabari","Gulshan","Bashundhara","Rampura","Motijheel","Basabo","Banani"]; //array to hold all the countries
+const items = ["mirpur","badda","uttara","mohammadpur","dhanmondi","savar","jatrabari","rampura","motijheel","malibag","basundhara","tongi","new market"] //array to hold all the countries
 const root = new MakeNode('\0') //making the root note
 
 
@@ -25,7 +24,7 @@ function handleTap(e) {
 
 //function for text-field
 function textFieldHandler(e) {
-  const value = e.target.value.toUpperCase()
+  const value = e.target.value.toLowerCase()
   const predictions = search(value, 0, root)
 
   list.innerHTML = ''
