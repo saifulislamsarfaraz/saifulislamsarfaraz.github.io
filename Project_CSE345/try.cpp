@@ -9,8 +9,7 @@ using namespace std;
 //Group ID: 8
 //Name : Md Saiful
 //Id : 2019-2-60-040
-//Name :Jekrul Islam Shajib
-//ID : 2019-2-60-046
+
 sem_t empty1;
 sem_t full1;
 sem_t empty2;
