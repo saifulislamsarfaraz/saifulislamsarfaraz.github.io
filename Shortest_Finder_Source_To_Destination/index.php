@@ -25,13 +25,14 @@
         background: url(File/tree.png);
         background-size: cover;
     }
-    .btn{
+
+    .btn1{
         width: 100%;
         height: 100%;
         cursor: pointer;
         
     }
-    .btn:hover{
+    .btn1:hover{
         border-radius: 0px;
         background-color: black;
     }
@@ -53,15 +54,10 @@
     .header{
         width: 588px;
         height: 863px;
-        position: relative;
-        margin-left:35%;
-        margin-top: 0%;
-
+        position: fixed;
     }
 </style>
 
-<?php include("watertext.php");?>
-<?php include("Trie.php");?>
 
 <div class="header">
     <?php 
@@ -194,7 +190,7 @@ for($i=0; $i<49; $i++){
     else $class="normal";
     
     if($center[$i][$j]==1){
-        $btn="<button class='btn'></button>";
+        $btn="<button class='btn1'></button>";
         $onclick="onclick='fun($i,$j)'";
     }
     
