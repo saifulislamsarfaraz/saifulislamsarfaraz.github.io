@@ -62,7 +62,7 @@ void dijkstra(int source){
 //d = 4
 //e = 5
 //f = 6
-pathPrint(char a[], int des){
+int pathPrint(char a[], int des){
        if(par[des]==-1){
         return des;
        }
