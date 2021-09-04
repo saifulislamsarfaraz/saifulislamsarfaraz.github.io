@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;500&display=swap');
-
+body{
+  height: 100%;
+}
 
 .top{
   display: flex;
 }
 .top {
   width: 550px;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
  h1 {

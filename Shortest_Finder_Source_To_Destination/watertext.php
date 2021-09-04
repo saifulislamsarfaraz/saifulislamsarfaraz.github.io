@@ -4,7 +4,8 @@
     justify-content: center;
 	position: relative;
     text-align: right;
-	top: 7%;
+	
+	margin-top: 3%;
 	left: 50%;
 	border-radius: 20px;
 	-webkit-transform: translate(-50%,-50%);

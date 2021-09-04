@@ -9,11 +9,12 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-
+<?php include("watertext.php")?> 
 <body>
     <header>
         <div class="container">
-            <h1 class="top">CSE 246 - Project</h1>
+       
+        <h1 class="top">CSE 246 - Project</h1>
             <h2>Find shortest path your destination</h2>
         </div>
     </header>
