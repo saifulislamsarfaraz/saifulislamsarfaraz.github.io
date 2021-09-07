@@ -34,6 +34,8 @@
     
     <script src="TrieScript.js"></script>
     <script src="triedataRead.js"></script>
+    <script src="mapScript.js"></script>
+
 </body>
 
 </html>

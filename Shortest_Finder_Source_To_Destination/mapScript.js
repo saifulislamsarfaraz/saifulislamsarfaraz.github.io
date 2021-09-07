@@ -118,5 +118,61 @@ function dfs(x,y,x1,y1,tx,ty,lev){
     if(x<0 || y<0 || x>49 || y>49)return;
     if(visit[x][y]==1 && level[x][y]<=lev)return;
     visit[x][y] = 1;
-    
+    pre_x[x][y] = x1;
+    pre_y[x][y] = y1;
+
+    level[x][y] = lev;
+    cnt2++;
+    if(x==tx && y == ty)return;
+    dfs(x+dx[0],y+dy[0],x,y,tx,ty,lev+1);
+    dfs(x+dx[2],y+dy[2],x,y,tx,ty,lev+1);
+    dfs(x+dx[3],y+dy[3],x,y,tx,ty,lev+1);
+    dfs(x+dx[1],y+dy[1],x,y,tx,ty,lev+1);
+}
+
+function find_path(x,y,tx,ty){
+    if(x==tx && y==ty) return 1;
+    x1 = pre_x[x][y];
+    y1 = pre_y[x][y];
+    return 1 + find_path(x1,y1,tx,ty);
+}
+
+function set_path(x,y,tx,ty){
+    visit_road[x][y] = 1;
+    x1 = pre_x[x][y];
+    y1 = pre_y[x][y];
+
+    post_x[x1][y1] = x;
+    post_y[x1][y1] = y;
+    console.log(x,y);
+    if(x==tx && y == ty) return;
+    set_path(x1,y1,tx,ty);
+}
+
+function set_graph_path(x,y,tx,ty){
+    visit_road[x][y] = 1;
+    console.log(x,y);
+    if(x==tx && y==ty) return;
+    x1 = pre_x[x][y];
+    y1 = pre_y[x][y];
+    div_id = String(x1) + "," + String(y1);
+    result="road_" + div_id;
+    document.getElementById(div_id).className="visit";
+
+    setTimeout(function(){
+        set_graph_path(x1,y1,tx,ty);
+    },40);
+}
+
+function path_reset(){
+    for(let i = 0; i < 49; i++){
+        for(let j = 0; j < 49; j++){
+            div_id = String(i) + "," + String(j);
+            result = "road_" + div_id;
+            if(visit_road[i][j]==1){
+                document.getElementById(div_id).className="visit_pre";
+            }
+
+        }
+    }
 }
