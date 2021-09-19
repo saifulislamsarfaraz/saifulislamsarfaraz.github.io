@@ -16,7 +16,9 @@ const textField = document.getElementById('text-field')
 const list = document.getElementById('list')
 
 textField.addEventListener('input', textFieldHandler)
-
+textField.addEventListener("Mirpur",function(event){
+  document.getElementById("fun(5,42)").click();
+});
 function handleTap(e) {
   const text = e.innerText
   textField.value = text

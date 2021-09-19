@@ -39,7 +39,7 @@
     .visit{
         background: url(File/map.png);
         background-size: 100%;
-        transition: all .2s ease-in;
+        transition: all 0.1s ease-in;
         filter: contrast(200%);
     }
 
@@ -54,7 +54,7 @@
     .header{
         width: 588px;
         height: 863px;
-        position: fixed;
+        position: absolute;
     }
 </style>
 
@@ -168,7 +168,7 @@ $road=set_road(1,7,'v_u',3,$road);
 
 for($i=0; $i<49; $i++){
 
-    for($j=0; $j<$n; $j++){
+    for($j=0; $j<49; $j++){
     
     $btn="";
     $onclick="";
