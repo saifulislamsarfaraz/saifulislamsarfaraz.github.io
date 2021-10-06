@@ -6,3 +6,5 @@ create table st(
 );
 
 DESCRIBE st;
+
+ALTER TABLE st ADD gpa DECIMAL(2,2);
