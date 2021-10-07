@@ -2,19 +2,5 @@
     "files.associations": {
         "ostream": "cpp"
     },
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "127.0.0.1",
-            "port": 3306,
-            "driver": "MySQL",
-            "database": "student",
-            "username": "root",
-            "name": "Practical",
-            "password": ""
-        }
-    ]
+    "sqltools.connections": []
 }
