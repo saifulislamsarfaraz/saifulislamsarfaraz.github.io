@@ -7,3 +7,5 @@ WHERE CustomerID=1;
 UPDATE Customers
 SET ContactName='Juan'
 WHERE Country='Mexico';
+
+
