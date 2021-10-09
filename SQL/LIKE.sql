@@ -24,3 +24,7 @@ WHERE CustomerName LIKE 'a%o';
 
 
 
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'a%o';
+
+
