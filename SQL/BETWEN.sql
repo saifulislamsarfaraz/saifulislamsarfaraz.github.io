@@ -19,3 +19,8 @@ ORDER BY ProductName;
 SELECT * FROM Products
 WHERE ProductName BETWEEN 'Carnavon Tigers' AND 'Mozzaralla di Giovanni'
 ORDER BY ProductName;
+
+
+SELECT * FROM Products
+WHERE ProductName NOT BETWEEN 'Carnavon Tigers' AND 'Mozzaralla di Giovanni'
+ORDER BY ProductName;
