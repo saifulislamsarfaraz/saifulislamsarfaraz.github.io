@@ -118,7 +118,7 @@ for(i=0; i<49; i++){
 
     function dfs(x,y,x1,y1,tx,ty,lev){
         
-        if(x<0 || y<0 || x>23 || y>49)return;
+        if(x<0 || y<0 || x>49 || y>49)return;
         if(visit[x][y]==1 && level[x][y]<=lev)return;
         visit[x][y]=1;
         pre_x[x][y]=x1;
