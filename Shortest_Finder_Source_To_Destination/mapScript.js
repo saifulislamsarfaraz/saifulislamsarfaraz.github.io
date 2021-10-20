@@ -27,7 +27,7 @@ for(i=0; i<49; i++){
         res="road_"+String(x)+","+String(y);
         val=document.getElementById(res).value;
         for(i=0; i<4; i++){
-            change_color(x+dx[i],y+dy[i]);
+            change_color(x+dx[i],y+dy[i],x,y);
         }
         flag=1;
 
@@ -90,7 +90,7 @@ for(i=0; i<49; i++){
 }
     function change_color(x,y){
         res=String(x)+","+String(y);
-        document.getElementById(res).style='background-color: ';
+        document.getElementById(res).style='background-color: green';
     }
 
     function find_path_cordinate(){
