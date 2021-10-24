@@ -150,6 +150,11 @@ $road=set_road(30,1,'v_l',46,$road);
 $road=set_road(38,1,'v_l',46,$road);
 $road=set_road(25,1,'v_l',5,$road);
 $road=set_road(25,19,'v_l',5,$road);
+$road=set_road(35,1,'v_l',5,$road);
+$road=set_road(35,20,'v_l',5,$road);
+$road=set_road(42,1,'v_l',5,$road);
+$road=set_road(42,20,'v_l',5,$road);
+
 
 
 $road=set_road(1,1,'v_u',46,$road);
@@ -158,6 +163,21 @@ $road=set_road(1,37,'v_u',7,$road);
 $road=set_road(1,13,'v_u',7,$road);
 $road=set_road(22,25,'v_u',24,$road);
 $road=set_road(27,13,'v_u',3,$road);
+$road=set_road(30,6,'v_u',5,$road);
+$road=set_road(30,13,'v_u',1,$road);
+$road=set_road(35,20,'v_u',2,$road);
+$road=set_road(38,7,'v_u',3,$road);
+$road=set_road(38,14,'v_u',3,$road);
+$road=set_road(38,20,'v_u',3,$road);
+$road=set_road(38,30,'v_u',3,$road);
+$road=set_road(38,36,'v_u',2,$road);
+$road=set_road(38,42,'v_u',3,$road);
+$road=set_road(30,30,'v_u',3,$road);
+$road=set_road(30,36,'v_u',3,$road);
+$road=set_road(30,42,'v_u',3,$road);
+$road=set_road(21,30,'v_u',3,$road);
+$road=set_road(25,36,'v_u',5,$road);
+$road=set_road(21,42,'v_u',3,$road);
 
 
 $road=set_road(8,34,'v_u',7,$road);
