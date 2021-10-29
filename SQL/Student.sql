@@ -4,3 +4,4 @@ CREATE TABLE student(
     Dept_name VARCHAR(20),
     Tot_cred VARCHAR(20)
 );
+
