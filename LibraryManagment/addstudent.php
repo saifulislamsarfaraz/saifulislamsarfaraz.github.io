@@ -14,7 +14,8 @@
    
    
          $sql = "INSERT INTO students( studentId, email, department, phoneNumber, name) VALUES ('$studentId',  '$email', '$dept','$phone', '$name' ) ";
-   
+
+         
          $query = mysqli_query($conn, $sql);
          $error = false;
          if($query){
