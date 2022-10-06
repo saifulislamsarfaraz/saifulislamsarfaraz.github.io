@@ -53,8 +53,8 @@ nav .logo {
 }
 
 nav .logo img {
-  height: 35px;
-  width: 35px;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
 }
 
