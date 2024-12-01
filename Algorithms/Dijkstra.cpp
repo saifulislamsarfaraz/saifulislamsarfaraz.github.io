@@ -1,4 +1,5 @@
-
+//Md Saiful
+//Id: 2019-2-60-040
 
 #include <bits/stdc++.h>
 #define SIZE 100105
@@ -27,22 +28,26 @@ bool vis[SIZE];
 vector <int> adj[SIZE];
 vector <int> adjw[SIZE];
 int n, e;
-//6 9
-//1 2 10
-//1 3 20
-//2 4 50
-//2 5 10
-//3 5 33
-//3 4 20
-//4 5 20
-//4 6 2
+//7 12
+//1 2 4
+//1 6 5
+//2 7 1
+//2 3 2
+//3 7 3
+//3 4 10
+//4 5 6
 //5 6 1
+//7 1 2
+//7 4 2
+//7 5 4
+//7 6 8
 void dijkstra(int source){
     par[source] = -1;
     pq.push(element(source, 0));
     int u, v, w;
     while(!pq.empty()){
         u=pq.top().node;
+        cout<<"node pop: "<<u<<endl;
         pq.pop();
         if(vis[u]) continue;
         vis[u]=true;
@@ -52,8 +57,25 @@ void dijkstra(int source){
                 par[v] = u;
                 dis[v]=dis[u]+adjw[u][i];
                 pq.push(element(v, dis[v]));
+                cout<<" push NW:("<<v<<","<<dis[v]<<")";
             }
         }
+        cout<<endl;
+        cout<<"index: ";
+        for(int i=1; i<=n; i++){
+            cout<<" "<<i;
+        }
+        cout<<endl;
+        cout<<"Dis:  ";
+        for(int i=1; i<=n; i++){
+            cout<<" "<<dis[i];
+        }
+        cout<<endl;
+        cout<<"vis:  ";
+        for(int i=1; i<=n; i++){
+            cout<<" "<<vis[i];
+        }
+        cout<<endl;
     }
 }
 //a = 1
@@ -62,6 +84,7 @@ void dijkstra(int source){
 //d = 4
 //e = 5
 //f = 6
+
 int pathPrint(char a[], int des){
        if(par[des]==-1){
         return des;
@@ -85,8 +108,8 @@ int main(){
         dis[i]=INF;
         vis[i]=false;
     }
-    dis[1]=0;
-    dijkstra(1);
+    dis[2]=0;
+    dijkstra(2);
     for(int i = 1; i<=n; i++){
         printf("a to %c total cost = %d path a ",a[i], dis[i]);
 
