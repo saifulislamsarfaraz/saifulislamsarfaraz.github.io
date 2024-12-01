@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+#define SIZE 1000106
+using namespace std;
+int n, a;
+vector <int> adj[SIZE];
+int par[SIZE];
+int dis[SIZE];
+queue <int> q;
+void bfs(int src)
+{
+    dis[src]=0;
+    par[src]=src;
+    q.push(src);
+    int u, v;
+    while(!q.empty())
+    {
+        u=q.front();
+        q.pop();
+        for(int i=0; i<adj[u].size(); i++)
+        {
+            v=adj[u][i];
+            if(dis[v]>dis[u]+1)
+            {
+                dis[v]=dis[u]+1;
+                par[v]=u;
+                q.push(v);
+            }
+        }
+    }
+}
+int main()
+{
+    scanf("%d %d", &n, &a);
+    int u, v;
+    for(int i=0; i<a; i++)
+    {
+        scanf("%d %d", &u, &v);
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    for(int i=1; i<=n; i++)
+    {
+        dis[i]=100000000;
+    }
+    int src=1;
+    bfs(src);
+    int max = dis[0];
+    for(int i=1; i<=n; i++)
+    {
+        if(dis[i] > max)
+            max = dis[i];
+    }
+    cout<<max;
+}
