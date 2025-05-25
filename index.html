@@ -1,475 +1,268 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Md. Saiful</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" type="image/png" href="images/purdue.png">
+    <meta charset="UTF-8">
+    <title>Md. Saiful - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/purdue.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .publication-card, .teaching-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .publication-card:hover, .teaching-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #github-card {
+            display: none;
+        }
+    </style>
 </head>
-
-<body>
-	<table
-		style="width:100%; max-width:900px; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;">
-		<tbody>
-			<tr style="padding:0px">
-				<td style="padding:0px">
-					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr style="padding:0px">
-
-								<td style="padding:2.5%; width:63%; vertical-align:middle">
-									<p style="text-align: center">
-										<name>Md. Saiful</name><br>
-										saifulislamsarfaraz at gmail dot com
-									</p>
-
-									<p>
-										A Computer Science and Engineering graduate from 
-										<a href="https://www.ewubd.edu/">East-West University</a>, where I maintained a scholarship and made the dean’s list for three consecutive semesters. I have a strong interest in Data science, Machine learning, Bioinformatics research, aiming to make a substantial impact in the field. <br><br> 
-										Presently working as an ML Engineer at <a href="https://www.genomearc.com">GenomeArc</a> and pursuing an MSc in CSE at <a href="https://www.bracu.ac.bd/">BRAC University</a>. Previously served as a Graduate Teaching Assistant (GTA) and Research Assistant (RA) under 
-										<a href="https://www.bracu.ac.bd/about/people/md-golam-rabiul-alam-phd">Dr. Md. Golam Rabiul Alam</a> at BRAC University.
-									</p>
-									
-									
-
-									<p>
-										 I worked with Professor <a
-											href="https://fse.ewubd.edu/computer-science-engineering/faculty-view/wasif">Dr. Ahmed Wasif Reza</a>
-										on Brain MRI Image Processing, and Classification Based on CNN 
-									</p>
-									<p style="text-align: center">
-										<a href="Data/MY_CV.pdf">CV</a> &nbsp/&nbsp
-										
-										<a href="https://www.linkedin.com/in/saifulislamsarfaraz">Linkedin</a> &nbsp/&nbsp
-										<a href="https://github.com/saifulislamsarfaraz">Github</a> &nbsp/&nbsp
-										<a href="https://twitter.com/saifulislamsarfaraz">X</a>&nbsp/&nbsp
-										<a href="https://scholar.google.com/citations?hl=en&user=_HuJ39IAAAAJ&view_op=list_works&gmla=AP6z3OaXxgOzy7KoToVT9poSdOsTCc0T8nPaX2hRv0JsxP0Z06oWwmX7sXG15SQMYam0CK83dwnglnXRoJeaCv9V"> Google Scholar </a>
-
-									</p>
-								</td>
-								<td style="padding:2.0%; width:30%;max-width:30%">
-									<a href="Data/photo.jpg"><img style="width:90%; max-width:90%"
-											alt="profile photo" src="Data/circle_image.jpg"
-											class="hoverZoomLink"></a>
-											<div class="counter">
-												<!-- hitwebcounter Code START -->
-	<a href="https://www.hitwebcounter.com" target="_blank">
-		<img src="https://hitwebcounter.com/counter/counter.php?page=17097746&style=0024&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>   
-										</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-
-					<table
-						style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr>
-								<td style="padding:20px;width:100%;vertical-align:middle">
-									<heading>News</heading>
-								</td>
-							</tr>
-						</tbody>
-						</table>
-					<table
-					style="width:100% ;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-					<tbody>
-						<!-- 
-						<tr>
-							<td style="padding-left:20px;padding-top:0px;width:10%;vertical-align:top"><a>[Dec '23]</a></td>
-
-							<td style="padding:0px;width:75%;vertical-align:middle">
-								Our paper <a href="">A Review on Mitigating Security Risk: Effective Strategies to Prevent Cross-site Request Forgery Vulnerabilities</a> has been accepted and presented in CIIR 2023!
-							</td>
-						</tr>
-						-->
-					</tbody>
-						
-					</table>
-					<br><br>
-					<table
-						style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr>
-								<td style="padding-left:20px;width:100%;vertical-align:middle">
-									<heading >Research Interest</heading>
-
-									<p>
-										Bioinformatics, Data Science, Deep Learning, Machine Learning, Computer Vision, NLP, LLM, Gen AI
-									</p>
-
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table
-						style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr>
-								<td style="padding:20px;width:100%;vertical-align:middle">
-									<heading>Publications</heading>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<table
-						style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-
-														<tr>
-								<td style="padding-left:20px;padding-top:0px;width:1%;vertical-align:top">[5]</td>
-
-								<td style="padding:0px;width:75%;vertical-align:middle">
-									<a href="https://link.springer.com/chapter/10.1007/978-3-031-73318-5_29"
-									   >
-										<papertitle>Education Certificate Storage and Verification Using Blockchain and Interplanetary File System</papertitle>
-									</a>
-									<br>
-										<strong>
-											M., Saiful,
-										</strong> M. Rana, N. Shaeed, M. Ferdaus & A. W. Reza
-									<br>
-
-							
-									<p></p>
-								</td>
-							</tr>
-														<tr>
-								<td style="padding-left:20px;padding-top:0px;width:1%;vertical-align:top">[5]</td>
-
-								<td style="padding:0px;width:75%;vertical-align:middle">
-									<a href="https://doi.org/10.1007/978-981-97-7603-0_27"
-									   >
-										<papertitle>A Review on Mitigating Security Risks: Effective Strategies to Prevent Cross-Site Request Forgery Vulnerabilities</papertitle>
-									</a>
-									<br>
-									Biswas, J., Hasan, <strong>M., Saiful</strong>, M., Mim, F.T., Tasnim, N. (2025).
-									<br>
-
-							
-									<p></p>
-								</td>
-							</tr>
-							<tr>
-								<td style="padding-left:20px;padding-top:0px;width:1%;vertical-align:top">[4]</td>
-
-								<td style="padding:0px;width:75%;vertical-align:middle">
-									<a href="https://digital-library.theiet.org/content/conferences/10.1049/icp.2023.1789"
-									   >
-										<papertitle>Solving Hamiltonian path problem using DNA computing</papertitle>
-									</a>
-									<br>
-									RM Rifat, <strong>M Saiful</strong>, R Bari, N Jahan, TR Pal, T Jabid, MS Ali, M Islam, M Hasan 
-									<br>
-
-							
-									<p></p>
-								</td>
-							</tr>
-
-
-							<tr>
-								<td style="padding-left:20px;padding-top:0px;width:1%;vertical-align:top">[3]</td>
-
-								<td style="padding:0px;width:75%;vertical-align:middle">
-									<a href="https://doi.org/10.1007/978-3-031-36246-0_17">
-										<papertitle>MRI-Based Brain Tumor Classification Using Various Deep Learning Convolutional Networks and CNN.</papertitle>
-									</a>
-									<br>
-									
-									<strong>Md. Saiful</strong>,  S. Haider, S. M. A. Rahman, N. Reza, A. W. Reza & M. S. Arefin
-									<br>
-									
-
-									<p></p>
-								</td>
-							</tr>
-
-							<tr>
-								<td style="padding-left:20px;padding-top:0px;width:1%;vertical-align:top">[2]</td>
-
-								<td style="padding:0px;width:75%;vertical-align:middle">
-									<a href="https://doi.org/10.1007/978-3-031-50158-6_36">
-										<papertitle>Brain MRI Classification for Alzheimer’s Disease Based on Convolutional Neural Network.</papertitle>
-									</a>
-									<br>
-									
-									<strong>Md. Saiful</strong>,  A. Saha, F. T. Mim, N. Tasnim, A. W. Reza & M. S. Arefin
-									<br>
-
-
-									<p></p>
-								</td>
-							</tr>
-
-							
-							<tr>
-								<td style="padding-left:20px;padding-top:0px;width:1%;vertical-align:top">[1]</td>
-
-								<td style="padding:0px;width:75%;vertical-align:middle">
-									<a href="https://doi.org/10.1007/978-3-031-50327-6_24">
-										<papertitle>Green Banking Through Blockchain-Based Application for Secure Transactions.</papertitle>
-									</a>
-									<br>
-
-									<strong>Md. Saiful</strong>, N. Reza, M. Mahajabin, S. T. Rahman, F. Alam, A. W. Reza & M. S. Arefin
-									<br>
-
-							
-									<p></p>
-								</td>
-							</tr>
-
-						</tbody>
-					</table>
-
-
-					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr>
-								<td style="padding-left:20px;width:100%;vertical-align:middle">
-									<heading>Education</heading>
-								  	<p>
-									    M.Sc. in Computer Science and Engineering(CSE)<br>
-							                    September 2024- Present<br>
-							                    CGPA: 3.80/ 4.00<br>
-							                    Credit Earned: 9/36<br>
-							                    Institution: BRAC University, Dhaka, Bangladesh
-									</p>
-									  <p>
-									    B.Sc. in Computer Science and Engineering(CSE)<br>
-							                    April 2019-Augest 2023<br>
-							                    CGPA: 3.65/ 4.00<br>
-							                    Credit Earned: 140/140<br>
-							                    Institution: East West University, Dhaka, Bangladesh
-									</p>
-									  <!-- 
-							                  <p>
-							                    Higher Secondary Certificate (HSC)<br>
-							                    Year: 2018<br>
-							                    GPA: 4.93/5.00<br>
-							                    Institution: Engineering University School and Collage(BUET), Dhaka-1000
-							                  </p>
-							                  <p>
-							                    Secondary School Certificate (SSC)<br>
-							                    Year: 2016<br>
-							                    GPA: 5.00/5.00<br>
-							                    Institution: Islamia Govt High School, Luxmibazar, Dhaka-1100 
-							                  </p>
-									-->
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<table
-						style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;">
-						<tbody>
-							<tr>
-								<td style="padding:20px;width:100%;vertical-align:middle">
-									<heading>Scholarships and Honors</heading>
-							                  <ul>
-									      <li>Awarded Merit Scholarship Based on BRACU Academic Results for the Spring 2025 semester at BRAC University. </li>	  
-							                      <li>Medha Lalon and Dean's Scholarship in the year of Summer 2022 to Summer 23 at East West University. </li>
-							                      <li>Awarded 2nd Runner Up by the Technical Committee of IEEE CS BDC Symposium 2024. </li>
-							                  </ul>
-																
-
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-
-
-					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr>
-                <td style="padding:20px; width:100%; vertical-align:middle">
-                <heading>Software Development(S)</heading>
-                <!--<ul>
-                <li>Shortest Route-Finding System</li>
-                <p>2D city map where many markets connected multiple roads. Find the shortest route
-                between two markets by using the Depth First Search Algorithm.(Stack: javascript,
-                php)</p>
-                <li>Mess Meal Management System</li>
-                <p>Mess members can dynamically handle every cost in their daily life.</p>
-                <li>Barber Shop Management System</li>
-                <p>Barbers can manage dynamically hair cutting, time, and payment.</p>
-                <!--<li>GitHub profile Searching</li>
-                <p>Used "GitHub API" to fetch users and get some profile data, and user repositories.</p>
-                <li> Machine Learning Project</li>
-                <p>Hotel Management System with Realtime Face Recognition(stack
-                Radis,SQLite3,Django,Python).</p>
-                <li> Build website Website</li>-->
-		<ul>
-                <p> (<a href="http://dedugen.com/">dedugen.com</a>, <a href="https://genomearc.com/">genomearc.com</a>, <a href="http://gonjohut.com/">gonjohut.com</a>)</p>
-                </ul>
-                </td>
-              </tr>
-
-						</tbody>
-					</table>
-          
-					<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-						<tbody>
-							<tr>
-				<!--
-					<td style="padding:20px; width:100%; vertical-align:middle">
-                <heading>Job Experiance</heading>
-                <p>Teacher at Udvash Academic Admission Care, UTA, GTA at East West University, RA at BRAC Univarsity</p>
-                <subhadding>Responsibility</subhadding>
-                <ul>
-                  <li>Lead discussion sessions with students.</li>
-                  <li>Work with students, and indoctrinate about problems they are having with the course material.</li>
-                  <li>Holding 21 hours per week's office hours.</li>
-                </ul>
-                </td>			
-				-->
-                
-              </tr>
-						</tbody>
-					</table>
-
-					<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-						<tbody>
-							<tr>
-								<td style="padding-left:20px;width:100%;vertical-align:middle">
-									<heading>Capstone Project(Thesis)</heading>
-									<p>
-										<a href="Data/"> MedicalBERT: A Medical Chatbot Built Using, BioBERT and GPT-2 ,LLM</a>
-										<br>
-
-										Md. Saiful
-										<br>
-
-										Undergraduate Thesis
-										<br>
-
-										East West University (2023)
-										
-								</td>
-							</tr>
-
-							<tr>
-								<td style="padding-left:20px;width:100%;vertical-align:middle">
-									
-								<h3>Github Profile Search</h3>
-							      <br>
-							    <form class="user-form" id="form">
-							      <input type="text" id = "search" placeholder="Search  a Github User" >
-							    </form>
-								</td></tr>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Teaching Assistantship</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        
-		<table width="97%" align="center" border="0" cellpadding="0" style="border-spacing: 10px 4px"><tbody>
-          <tr>
-	
-			<td style="padding:20px;width:33.33%;background-color:rgb(227, 238, 239)" >
-				CSE475
-				<br><br>
-				<a href="">Machine Learning </a>
-				<br><br>
-				Last: Spring 2023 - Fall 2024
-			</td>
-          </tr>
-		  
-		  <tr>
-		  <td style="padding:20px;width:33.33%;background-color:rgb(227, 238, 239)" >
-				CSE103
-				<br><br>
-				<a href="">Object-oriented 
-				Programming Language</a>
-				<br><br>
-				Last: Spring 23
-			</td>
-		  <td style="padding:20px;width:33.33%;background-color:rgb(227, 238, 239)" >
-				CSE106
-				<br><br>
-				<a href="">Information System Design and Analysis<br></a>
-				<br><br>
-				Last: Summer 22 and Fall 22
-			</td>
-			
-		  
-            <td style="padding:20px;width:33.33%;background-color:rgb(227, 238, 239)" >
-				CSE487
-				<br><br>
-				<a href="">Computer and Cyber Security</a>
-				<br><br>
-				Last: Summer 23
-			</td>
-          </tr>
-		  <tr>
-		  </tr>
-        </tbody></table>
-
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-</body>
-
-</html>
-
-
-
-
-
-
-    <!-- 
-    <div class="modal-container" id="modal">
-      <div class="modal">
-        <button class="close-btn" id="close">
-          <i class="fa fa-times"></i>
-        </button>
-        <div class="modal-header">
-          <h3>Contact Me</h3>
+<body class="bg-gray-100 font-sans antialiased">
+    <div class="modal-container fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="modal">
+        <div class="modal bg-white p-6 rounded-lg max-w-md w-full">
+            <button class="close-btn bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center float-right" id="close">X</button>
+            <div class="modal-header text-center mb-4">
+                <h3 class="text-2xl font-semibold text-gray-800">Contact Me</h3>
+            </div>
+            <div class="modal-content">
+                <p class="text-gray-600 mb-4">Contact me if you have any queries</p>
+                <form class="modal-form" id="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter Name" class="w-full p-2 border rounded" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" class="w-full p-2 border rounded" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="Comments" class="block text-gray-700">Your Message</label>
+                        <textarea name="Comments" id="message" rows="5" class="w-full p-2 border rounded" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Submit</button>
+                </form>
+                <p id="form-message" class="text-green-600 mt-4 hidden"></p>
+            </div>
         </div>
-        <div class="modal-content">
-          <h3>Contact with me if you have any queries </h3>
-          <form class="modal-form">
-            <div>
-              <label for="name"> Your Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter Name"
-                class="form-input"
-              />
-            </div>
-            <div>
-              <label for="email">Your Email</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter Email"
-                class="form-input"
-
-              />
-            </div>
-            <div>
-              <label for="Comments">Your message</label>
-              <textarea name="Comments" rows="7" cols="40" style="width:100%;max-width:350px; padding: 30px;"></textarea>
-            </div>
-            <input type="submit" value="Submit" class="submit-btn" />
-          </form>
-        </div>
-      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-  </body>
-</html>
+    <header class="sticky-header bg-gradient-to-r from-blue-600 to-teal-500 text-white text-center py-12 shadow-lg">
+        <h1 class="text-4xl font-bold">Md. Saiful</h1>
+        <p class="text-lg mt-2">saifulislamsarfaraz at gmail dot com</p>
+        <div class="links text-center">
+            <a href="Data/MY_CV.pdf" class="text-white hover:underline mx-2">CV</a> |
+            <a href="https://www.linkedin.com/in/saifulislamsarfaraz" class="text-white hover:underline mx-2">LinkedIn</a> |
+            <a href="https://github.com/saifulislamsarfaraz" class="text-white hover:underline mx-2">GitHub</a> |
+            <a href="https://twitter.com/saifulislamsarfaraz" class="text-white hover:underline mx-2">X</a> |
+            <a href="https://scholar.google.com/citations?hl=en&user=_HuJ39IAAAAJ" class="text-white hover:underline mx-2">Google Scholar</a>
+        </div>
+    </header>
+    <div class="container max-w-5xl mx-auto p-6">
+        <button class="block mx-auto mb-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" id="open-modal">Contact Me</button>
+        <div class="section profile-section flex flex-col md:flex-row items-center gap-8 mb-12 bg-white p-6 rounded-lg shadow-md" id="about">
+            <div class="profile-info flex-1">
+                <p class="text-gray-700 mb-4">I’m a passionate Computer Science and Engineering graduate from <a href="https://www.ewubd.edu/" class="text-blue-600 hover:underline font-semibold">East-West University</a>, where I earned a scholarship and secured a place on the Dean’s List for three consecutive semesters. My drive lies in advancing Data Science, Machine Learning, and Bioinformatics to create meaningful impact.</p>
+                <p class="text-gray-700 mb-4">Currently, I’m thriving as a Machine Learning Engineer at <a href="https://www.genomearc.com" class="text-blue-600 hover:underline font-semibold">GenomeArc</a> while pursuing an MSc in Computer Science and Engineering at <a href="https://www.bracu.ac.bd/" class="text-blue-600 hover:underline font-semibold">BRAC University</a>. Previously, I served as a Research Assistant under <a href="https://www.bracu.ac.bd/about/people/md-golam-rabiul-alam-phd" class="text-blue-600 hover:underline font-semibold">Dr. Md. Golam Rabiul Alam</a>, contributing to cutting-edge research.</p>
+                <p class="text-gray-700 mb-4">I collaborated with <a href="https://fse.ewubd.edu/computer-science-engineering/faculty-view/wasif" class="text-blue-600 hover:underline font-semibold">Dr. Ahmed Wasif Reza</a> on advanced Brain MRI Image Processing and Classification using Convolutional Neural Networks (CNN), sharpening my expertise in applied machine learning.</p>
+            </div>
+            <div class="profile-photo text-center">
+                <a href="Data/photo.jpg"><img src="Data/circle_image.jpg" alt="profile photo" class="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg"></a>
+                <div class="counter mt-4">
+                    <a href="https://www.hitwebcounter.com" target="_blank">
+                        <img src="https://hitwebcounter.com/counter/counter.php?page=17097746&style=0024&nbdigits=5&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section mb-12" id="research">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Research Interest</h2>
+            <p class="text-gray-700">Bioinformatics, Data Science, Deep Learning, Machine Learning, Computer Vision, NLP, LLM, Gen AI</p>
+        </div>
+        <div class="section mb-12" id="publications">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Publications</h2>
+            <div class="publication-card bg-white p-4 rounded-lg shadow-md mb-4">
+                <p>[5] <a href="https://link.springer.com/chapter/10.1007/978-3-031-73318-5_29" class="text-blue-600 hover:underline font-semibold">Education Certificate Storage and Verification Using Blockchain and Interplanetary File System</a><br>
+                <strong>M., Saiful</strong>, M. Rana, N. Shaeed, M. Ferdaus & A. W. Reza</p>
+            </div>
+            <div class="publication-card bg-white p-4 rounded-lg shadow-md mb-4">
+                <p>[4] <a href="https://doi.org/10.1007/978-981-97-7603-0_27" class="text-blue-600 hover:underline font-semibold">A Review on Mitigating Security Risks: Effective Strategies to Prevent Cross-Site Request Forgery Vulnerabilities</a><br>
+                Biswas, J., Hasan, <strong>M., Saiful</strong>, M., Mim, F.T., Tasnim, N. (2025).</p>
+            </div>
+            <div class="publication-card bg-white p-4 rounded-lg shadow-md mb-4">
+                <p>[3] <a href="https://digital-library.theiet.org/content/conferences/10.1049/icp.2023.1789" class="text-blue-600 hover:underline font-semibold">Solving Hamiltonian Path Problem Using DNA Computing</a><br>
+                RM Rifat, <strong>M Saiful</strong>, R Bari, N Jahan, TR Pal, T Jabid, MS Ali, M Islam, M Hasan</p>
+            </div>
+            <div class="publication-card bg-white p-4 rounded-lg shadow-md mb-4">
+                <p>[2] <a href="https://doi.org/10.1007/978-3-031-36246-0_17" class="text-blue-600 hover:underline font-semibold">MRI-Based Brain Tumor Classification Using Various Deep Learning Convolutional Networks and CNN</a><br>
+                <strong>Md. Saiful</strong>, S. Haider, S. M. A. Rahman, N. Reza, A. W. Reza & M. S. Arefin</p>
+            </div>
+            <div class="publication-card bg-white p-4 rounded-lg shadow-md mb-4">
+                <p>[1] <a href="https://doi.org/10.1007/978-3-031-50158-6_36" class="text-blue-600 hover:underline font-semibold">Brain MRI Classification for Alzheimer’s Disease Based on Convolutional Neural Network</a><br>
+                <strong>Md. Saiful</strong>, A. Saha, F. T. Mim, N. Tasnim, A. W. Reza & M. S. Arefin</p>
+            </div>
+            <div class="publication-card bg-white p-4 rounded-lg shadow-md mb-4">
+                <p>[0] <a href="https://doi.org/10.1007/978-3-031-50327-6_24" class="text-blue-600 hover:underline font-semibold">Green Banking Through Blockchain-Based Application for Secure Transactions</a><br>
+                <strong>Md. Saiful</strong>, N. Reza, M. Mahajabin, S. T. Rahman, F. Alam, A. W. Reza & M. S. Arefin</p>
+            </div>
+        </div>
+        <div class="section mb-12" id="education">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Education</h2>
+            <div class="education bg-white p-4 rounded-lg shadow-md mb-4">
+                <p><strong>M.Sc. in Computer Science and Engineering (CSE)</strong><br>
+                September 2024 - Present<br>
+                CGPA: 3.80/4.00<br>
+                Credit Earned: 9/36<br>
+                Institution: BRAC University, Dhaka, Bangladesh</p>
+            </div>
+            <div class="education bg-white p-4 rounded-lg shadow-md mb-4">
+                <p><strong>B.Sc. in Computer Science and Engineering (CSE)</strong><br>
+                April 2019 - August 2023<br>
+                CGPA: 3.65/4.00<br>
+                Credit Earned: 140/140<br>
+                Institution: East West University, Dhaka, Bangladesh</p>
+            </div>
+        </div>
+        <div class="section mb-12" id="scholarships">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Scholarships and Honors</h2>
+            <div class="scholarship bg-white p-4 rounded-lg shadow-md">
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li>Awarded Merit Scholarship Based on BRACU Academic Results for the Spring 2025 semester at BRAC University.</li>
+                    <li>Medha Lalon and Dean's Scholarship in the year of Summer 2022 to Summer 2023 at East West University.</li>
+                    <li>Awarded 2nd Runner Up by the Technical Committee of IEEE CS BDC Symposium 2024.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section mb-12" id="software">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Software Development</h2>
+            <div class="software bg-white p-4 rounded-lg shadow-md">
+                <p class="text-gray-700">Contributed to: <a href="http://dedugen.com/" class="text-blue-600 hover:underline">dedugen.com</a>, <a href="https://genomearc.com/" class="text-blue-600 hover:underline">genomearc.com</a>, <a href="http://gonjohut.com/" class="text-blue-600 hover:underline">gonjohut.com</a></p>
+            </div>
+        </div>
+        <div class="section mb-12" id="thesis">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Capstone Project (Thesis)</h2>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <p><a href="Data/" class="text-blue-600 hover:underline font-semibold">MedicalBERT: A Medical Chatbot Built Using BioBERT and GPT-2, LLM</a><br>
+                Md. Saiful<br>
+                Undergraduate Thesis<br>
+                East West University (2023)</p>
+            </div>
+        </div>
+        <div class="section mb-12" id="github">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">GitHub Profile Search</h2>
+            <form class="user-form mb-4 flex justify-center" id="form">
+                <input type="text" id="search" placeholder="Search a GitHub User" class="p-2 border rounded-l w-64">
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded-r hover:bg-blue-700">Search</button>
+            </form>
+            <div id="github-card" class="bg-white p-4 rounded-lg shadow-md">
+                <h3 id="github-name" class="text-xl font-semibold text-gray-800"></h3>
+                <p id="github-bio" class="text-gray-600"></p>
+                <p id="github-repos" class="text-gray-600"></p>
+                <a id="github-link" href="#" class="text-blue-600 hover:underline">View Profile</a>
+            </div>
+        </div>
+        <div class="section mb-12" id="teaching">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Teaching Assistantship</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <p><strong>CSE475</strong><br>
+                    <a href="#" class="text-blue-600 hover:underline">Machine Learning</a><br>
+                    Last: Spring 2023 - Fall 2024</p>
+                </div>
+                <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <p><strong>CSE103</strong><br>
+                    <a href="#" class="text-blue-600 hover:underline">Object-Oriented Programming Language</a><br>
+                    Last: Spring 2023</p>
+                </div>
+                <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <p><strong>CSE106</strong><br>
+                    <a href="#" class="text-blue-600 hover:underline">Information System Design and Analysis</a><br>
+                    Last: Summer 2022 and Fall 2022</p>
+                </div>
+                <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <p><strong>CSE487</strong><br>
+                    <a href="#" class="text-blue-600 hover:underline">Computer and Cyber Security</a><br>
+                    Last: Summer 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script>
+        const modal = document.getElementById('modal');
+        const openModal = document.getElementById('open-modal');
+        const closeModal = document.getElementById('close');
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
 
-Modal -->
+        openModal.addEventListener('click', () => modal.classList.remove('hidden'));
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            contactForm.reset();
+            formMessage.classList.add('hidden');
+        });
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (contactForm.checkValidity()) {
+                formMessage.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    formMessage.classList.add('hidden');
+                }, 2000);
+            } else {
+                contactForm.reportValidity();
+            }
+        });
+
+        document.getElementById('form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('search').value;
+            const githubCard = document.getElementById('github-card');
+            try {
+                const response = await axios.get(`https://api.github.com/users/${username}`);
+                document.getElementById('github-name').textContent = response.data.name || username;
+                document.getElementById('github-bio').textContent = response.data.bio || 'No bio available';
+                document.getElementById('github-repos').textContent = `Public Repos: ${response.data.public_repos}`;
+                document.getElementById('github-link').href = response.data.html_url;
+                githubCard.style.display = 'block';
+            } catch (error) {
+                githubCard.style.display = 'none';
+                alert('GitHub User not found!');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
