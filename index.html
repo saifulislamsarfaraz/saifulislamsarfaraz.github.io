@@ -162,17 +162,17 @@
             <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
                 <p><strong>dedugen.com</strong><br>
                 <a href="http://dedugen.com/" class="text-blue-600 hover:underline">Dedugen</a><br>
-                Mental healthcare Platform </p>
+                <p>Dedugen is a bilingual mental health platform offering trusted information, self-help tools, and professional counseling in Bangla and English—empowering you to take charge of your mental well-being.</p>
             </div>
             <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
                 <p><strong>genomearc.com</strong><br>
                 <a href="https://genomearc.com/" class="text-blue-600 hover:underline">GenomeArc</a><br>
-                Genetics and Genomics Solution</p>
+                Genomic and OMICs-based AI solutions for diagnostics and therapeutics.</p>
             </div>
             <div class="teaching-card bg-white p-4 rounded-lg shadow-md text-center">
                 <p><strong>gonjohut.com</strong><br>
                 <a href="http://gonjohut.com/" class="text-blue-600 hover:underline">Gonjohut</a><br>
-                E-Commerace</p>
+                E-commerce platform offering a wide range of products including clothing and groceries.</p>
             </div>
             </div>
         </div>
@@ -185,19 +185,76 @@
                 East West University (2023)</p>
             </div>
         </div>
-        <div class="section mb-12" id="github">
-            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">GitHub Profile Search</h2>
-            <form class="user-form mb-4 flex justify-center" id="form">
-                <input type="text" id="search" placeholder="Search a GitHub User" class="p-2 border rounded-l w-64">
-                <button type="submit" class="bg-blue-600 text-white p-2 rounded-r hover:bg-blue-700">Search</button>
-            </form>
-            <div id="github-card" class="bg-white p-4 rounded-lg shadow-md">
-                <h3 id="github-name" class="text-xl font-semibold text-gray-800"></h3>
-                <p id="github-bio" class="text-gray-600"></p>
-                <p id="github-repos" class="text-gray-600"></p>
-                <a id="github-link" href="#" class="text-blue-600 hover:underline">View Profile</a>
+        <!--
+        
+        <div class="section mb-12" id="projects">
+            <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Recent Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+                <div class="project-card bg-white p-4 rounded-lg shadow-md cursor-pointer transition hover:shadow-xl" onclick="showProjectModal('project1')">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">MedicalBERT Chatbot</h3>
+                    <p class="text-gray-600">A medical chatbot using BioBERT and GPT-2 for healthcare Q&A.</p>
+                </div>
+                <div class="project-card bg-white p-4 rounded-lg shadow-md cursor-pointer transition hover:shadow-xl" onclick="showProjectModal('project2')">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dedugen Platform</h3>
+                    <p class="text-gray-600">Bilingual mental health platform with self-help tools and counseling.</p>
+                </div>
+                <div class="project-card bg-white p-4 rounded-lg shadow-md cursor-pointer transition hover:shadow-xl" onclick="showProjectModal('project3')">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">GenomeArc AI</h3>
+                    <p class="text-gray-600">Genomic and OMICs-based AI solutions for diagnostics and therapeutics.</p>
+                </div>
+                
             </div>
         </div>
+
+        <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
+                <button class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-2xl" onclick="closeProjectModal()">&times;</button>
+                <div id="project-modal-content"></div>
+            </div>
+        </div>
+        <script>
+            // Project details data
+            const projectDetails = {
+                project1: {
+                    title: "MedicalBERT Chatbot",
+                    description: "MedicalBERT is a medical chatbot built using BioBERT and GPT-2, designed to answer healthcare-related questions using advanced NLP and LLM techniques. It was developed as an undergraduate thesis at East West University.",
+                    link: "Data/",
+                    year: "2023"
+                },
+                project2: {
+                    title: "Dedugen Platform",
+                    description: "Dedugen is a bilingual mental health platform offering trusted information, self-help tools, and professional counseling in Bangla and English. It empowers users to take charge of their mental well-being.",
+                    link: "http://dedugen.com/",
+                    year: "2024"
+                },
+                project3: {
+                    title: "Horizon AI",
+                    description: "GenomeArc provides genomic and OMICs-based AI solutions for diagnostics and therapeutics, leveraging machine learning for healthcare innovation.",
+                    link: "https://genomearc.com/",
+                    year: "2024"
+                }
+                // Add more projects here as needed
+            };
+
+            function showProjectModal(projectKey) {
+                const project = projectDetails[projectKey];
+                if (project) {
+                    document.getElementById('project-modal-content').innerHTML = `
+                        <h3 class="text-2xl font-bold text-blue-700 mb-2">${project.title}</h3>
+                        <p class="text-gray-700 mb-4">${project.description}</p>
+                        <p class="mb-2"><strong>Year:</strong> ${project.year}</p>
+                        <a href="${project.link}" target="_blank" class="text-blue-600 hover:underline">View Project</a>
+                    `;
+                    document.getElementById('project-modal').classList.remove('hidden');
+                }
+            }
+
+            function closeProjectModal() {
+                document.getElementById('project-modal').classList.add('hidden');
+            }
+        </script>
+        -->
         <div class="section mb-12" id="teaching">
             <h2 class="text-2xl font-semibold text-blue-600 border-b-2 border-blue-600 pb-2 mb-6">Teaching Assistantship</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
