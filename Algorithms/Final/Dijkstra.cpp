@@ -21,18 +21,7 @@ struct element{
         return weight>a.weight;
     }
 };
-//6 11
-//1 2 1
-//1 3 5
-//2 3 3
-//2 4 2
-//3 4 4
-//4 5 9
-//4 6 13
-//5 1 3
-//5 2 6
-//5 6 7
-//6 3 8
+
 priority_queue <element, vector <element>, greater <element> > pq;
 int dis[SIZE];
 bool vis[SIZE];
