@@ -62,6 +62,67 @@
 										<a href="https://scholar.google.com/citations?hl=en&user=_HuJ39IAAAAJ&view_op=list_works&gmla=AP6z3OaXxgOzy7KoToVT9poSdOsTCc0T8nPaX2hRv0JsxP0Z06oWwmX7sXG15SQMYam0CK83dwnglnXRoJeaCv9V"> Google Scholar </a>
 
 									</p>
+
+						<p style="text-align:center; margin-top: 12px;">
+  <button id="coffee-btn" onclick="toggleBlog()" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#FAEEDA;border:0.5px solid #EF9F27;border-radius:999px;cursor:pointer;font-size:14px;font-weight:500;color:#633806;transition:background 0.15s,transform 0.1s;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BA7517" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+      <line x1="6" y1="1" x2="6" y2="4"/>
+      <line x1="10" y1="1" x2="10" y2="4"/>
+      <line x1="14" y1="1" x2="14" y2="4"/>
+    </svg>
+    Buy me a coffee
+  </button>
+</p>
+
+<div id="blog-panel" style="display:none; margin-top:20px; max-width:600px; margin-left:auto; margin-right:auto;"></div>
+
+<style>
+.blog-post { background:#fff; border:0.5px solid #e0e0e0; border-radius:12px; padding:1rem 1.25rem; margin-bottom:12px; animation:fadeSlide 0.25s ease forwards; opacity:0; }
+.blog-post:nth-child(2){animation-delay:0.06s}
+.blog-post:nth-child(3){animation-delay:0.12s}
+.blog-post:nth-child(4){animation-delay:0.18s}
+.blog-post:nth-child(5){animation-delay:0.24s}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.post-tag{display:inline-block;font-size:11px;font-weight:500;padding:2px 10px;border-radius:999px;margin-bottom:6px;}
+.tag-ml{background:#EEEDFE;color:#3C3489}
+.tag-cv{background:#E1F5EE;color:#085041}
+.tag-nlp{background:#E6F1FB;color:#0C447C}
+.tag-bio{background:#EAF3DE;color:#27500A}
+.post-title{font-size:15px;font-weight:500;color:#111;margin-bottom:4px;}
+.post-date{font-size:12px;color:#888;margin-bottom:6px;}
+.post-excerpt{font-size:13px;color:#555;line-height:1.6;}
+.post-footer{margin-top:10px;}
+.read-link{font-size:13px;color:#185FA5;text-decoration:none;font-weight:500;}
+.read-link:hover{text-decoration:underline;}
+</style>
+
+<script>
+const posts = [
+  { tag: "tag-bio", tagName: "Bioinformatics", title: "RAG for Clinical Phenotype-Genotype Identification", date: "March 2025", excerpt: "How RAG systems can bridge the gap between raw genomic data and actionable clinical insights.", link: "#" },
+  { tag: "tag-cv",  tagName: "Computer Vision",  title: "Deep Learning for Brain MRI Classification", date: "November 2024", excerpt: "A behind-the-scenes look at our work on brain MRI processing and class imbalance challenges.", link: "#" },
+  { tag: "tag-ml",  tagName: "Machine Learning", title: "Optimizing Variant Analysis Workflows: 40% Improvement", date: "September 2024", excerpt: "At NeuroGen Healthcare, we rebuilt our genomic pipeline. Here's what actually worked.", link: "#" },
+  { tag: "tag-nlp", tagName: "NLP", title: "IEEE CS Bangladesh Symposium 2024 — 2nd Runner-Up", date: "July 2024", excerpt: "We won 2nd Runner-Up. Here's the paper, the nerves, and what I'd do differently.", link: "#" },
+];
+
+function toggleBlog() {
+  const panel = document.getElementById('blog-panel');
+  if (panel.style.display === 'none') {
+    panel.innerHTML = posts.map(p => `
+      <div class="blog-post">
+        <span class="post-tag ${p.tag}">${p.tagName}</span>
+        <div class="post-title">${p.title}</div>
+        <div class="post-date">${p.date}</div>
+        <div class="post-excerpt">${p.excerpt}</div>
+        <div class="post-footer"><a class="read-link" href="${p.link}">Read more →</a></div>
+      </div>`).join('');
+    panel.style.display = 'block';
+  } else {
+    panel.style.display = 'none';
+  }
+}
+</script>
 								</td>
 				
 								<td style="padding:2.0%; width:30%;max-width:30%">
